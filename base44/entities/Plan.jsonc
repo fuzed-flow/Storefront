@@ -1,0 +1,78 @@
+{
+  "name": "Plan",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Plan name e.g. Starter, Professional"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short subtitle for the plan"
+    },
+    "price": {
+      "type": "string",
+      "description": "Display price e.g. $99 or Custom"
+    },
+    "period": {
+      "type": "string",
+      "description": "Billing period suffix e.g. /mo"
+    },
+    "highlight": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to highlight this plan as featured"
+    },
+    "badge": {
+      "type": "string",
+      "description": "Optional badge text e.g. Most Popular"
+    },
+    "bullets": {
+      "type": "string",
+      "description": "JSON array of {text, included} objects",
+      "default": "[]"
+    },
+    "pro_highlights": {
+      "type": "string",
+      "description": "JSON array of highlight strings for the featured plan",
+      "default": "[]"
+    },
+    "cta": {
+      "type": "string",
+      "description": "CTA button text"
+    },
+    "cta_href": {
+      "type": "string",
+      "description": "CTA link"
+    },
+    "display_order": {
+      "type": "number",
+      "description": "Sort order \u2014 lower numbers appear first",
+      "default": 0
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "cta",
+    "cta_href"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

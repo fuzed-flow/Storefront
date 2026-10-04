@@ -1,0 +1,101 @@
+{
+  "name": "Lead",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the person submitting the form"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Contact phone number"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name if provided"
+    },
+    "trade_type": {
+      "type": "string",
+      "description": "Type of contracting business",
+      "enum": [
+        "Renovation",
+        "Home Builder",
+        "General Contractor",
+        "Deck Builder",
+        "Landscaper",
+        "Trade Company",
+        "Other"
+      ]
+    },
+    "team_size": {
+      "type": "string",
+      "description": "Size of the contractor's team",
+      "enum": [
+        "1-5",
+        "6-15",
+        "16-30",
+        "31-50",
+        "50+"
+      ]
+    },
+    "preferred_date": {
+      "type": "string",
+      "description": "Preferred demo date",
+      "format": "date"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional notes or message from the lead"
+    },
+    "form_type": {
+      "type": "string",
+      "description": "Which form the lead submitted",
+      "enum": [
+        "demo_request",
+        "trial_signup",
+        "contact_inquiry"
+      ],
+      "default": "demo_request"
+    },
+    "source": {
+      "type": "string",
+      "description": "Where the lead came from",
+      "default": "website_form"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "demo_booked",
+        "converted",
+        "lost"
+      ],
+      "default": "new"
+    },
+    "address": {
+      "type": "string",
+      "description": "Street address"
+    },
+    "city": {
+      "type": "string",
+      "description": "City"
+    },
+    "province": {
+      "type": "string",
+      "description": "Province or state"
+    },
+    "postal_code": {
+      "type": "string",
+      "description": "Postal or zip code"
+    }
+  },
+  "required": [
+    "name",
+    "phone"
+  ]
+}
