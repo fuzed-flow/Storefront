@@ -29,7 +29,7 @@ Record a baseline of indexed pages, impressions, clicks and query groups. Compar
 
 ## Conversion and performance events
 
-The storefront includes Vercel Web Analytics and Speed Insights. Confirm the project dashboards are enabled before relying on their measurements. Actions also emit `window.dataLayer` events for a later tag-manager setup. No analytics event includes form values, names, emails or message text.
+The storefront includes Vercel Web Analytics and Speed Insights. The included Hobby Web Analytics plan was enabled on 4 October 2026: capped at 50,000 events/month with 30 days of viewable history. It measures visitors and page views. Custom-event reports require a paid Vercel plan and have not been enabled. Actions emit `window.dataLayer` events for a later tag-manager setup, and actual saved enquiries are recorded in Supabase. No analytics event includes form values, names, emails or message text.
 
 | Event | Meaning |
 | --- | --- |
