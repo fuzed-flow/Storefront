@@ -77,9 +77,12 @@ export const testimonials = [
 export const DEFAULT_PLANS = [
   {
     name: 'Starter',
+    monthlyPrice: '$29',
+    annualTotal: 252,
+    priceIds: { monthly: 'price_1UMs7VIfI96QPT6lT0RLG9JI', annual: 'price_1UMs8KIfI96QPT6lP4aiTEwb' },
     desc: 'For Small Contractors',
     price: '$21',
-    period: 'Billed annually or $29.99 month-to-month',
+    period: 'Billed annually or $29 USD month-to-month',
     highlight: false,
     badge: null,
     bullets: [
@@ -97,13 +100,16 @@ export const DEFAULT_PLANS = [
       { text: 'Advanced reporting', included: false },
     ],
     cta: 'Start Free Trial',
-    ctaHref: 'https://app.fuzedflow.com/signup?plan=price_1U8Qw1IfI96QPT6l00XC0BWp',
+    ctaHref: 'https://app.fuzedflow.com/signup?plan=price_1UMs8KIfI96QPT6lP4aiTEwb',
   },
   {
     name: 'Professional',
+    monthlyPrice: '$59',
+    annualTotal: 588,
+    priceIds: { monthly: 'price_1UMs8NIfI96QPT6l4fb4CV40', annual: 'price_1UMs8SIfI96QPT6lCL8Uxd7b' },
     desc: 'For Growing Businesses',
     price: '$49',
-    period: 'Billed annually or $59.99 month-to-month',
+    period: 'Billed annually or $59 USD month-to-month',
     highlight: true,
     badge: 'Most Popular — Best Value',
     proHighlights: [
@@ -121,13 +127,16 @@ export const DEFAULT_PLANS = [
       { text: 'Advanced reporting', included: true },
     ],
     cta: 'Subscribe Now',
-    ctaHref: 'https://app.fuzedflow.com/signup?plan=price_1U8QqYIfI96QPT6lPvUwTQwl',
+    ctaHref: 'https://app.fuzedflow.com/signup?plan=price_1UMs8SIfI96QPT6lCL8Uxd7b',
   },
   {
     name: 'Business',
+    monthlyPrice: '$159',
+    annualTotal: 1548,
+    priceIds: { monthly: 'price_1UMs8VIfI96QPT6lKDent3gP', annual: 'price_1UMs8ZIfI96QPT6liR9UtHga' },
     desc: 'Complete system for established crews',
     price: '$129',
-    period: 'Billed annually or $159.99 month-to-month',
+    period: 'Billed annually or $159 USD month-to-month',
     highlight: false,
     badge: null,
     bullets: [
@@ -139,7 +148,7 @@ export const DEFAULT_PLANS = [
       { text: 'Custom reporting', included: true },
     ],
     cta: 'Start Free Trial',
-    ctaHref: 'https://app.fuzedflow.com/signup?plan=price_1U8Qw1IfI96QPT6l00XC0BWp',
+    ctaHref: 'https://app.fuzedflow.com/signup?plan=price_1UMs8ZIfI96QPT6liR9UtHga',
   },
   {
     name: 'Enterprise',

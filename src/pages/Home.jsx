@@ -296,28 +296,12 @@ export default function Home() {
             <div className="mt-12 grid gap-6 grid-cols-1 lg:grid-cols-3 items-stretch">
               {DEFAULT_PLANS.slice(0, 3).map((plan) => {
                 
-                // 👇 NEW: Dynamic Pricing Logic
-                // Adjusts the displayed price based on the toggle state
-                const displayPrice = isAnnual ? plan.price : (plan.name === 'Starter' ? '$29' : plan.name === 'Professional' ? '$59' : '$149');
-                const billingText = isAnnual ? 'Billed annually' : 'Billed monthly';
-                
-                // 👇 NEW: Dynamic Stripe Links mapped to your actual Price IDs
-// 👇 NEW: Dynamic Stripe Links mapped to your actual Price IDs
-let checkoutLink = '';
-
-if (plan.name === 'Starter') {
-  checkoutLink = isAnnual 
-    ? 'https://app.fuzedflow.com/signup?plan=price_1UAK7EIfI96QPT6lL73xZqir' 
-    : 'https://app.fuzedflow.com/signup?plan=price_1UAK7EIfI96QPT6lJNF9XNlx';
-} else if (plan.name === 'Professional') {
-  checkoutLink = isAnnual 
-    ? 'https://app.fuzedflow.com/signup?plan=price_1UAK7lIfI96QPT6lb0wHONs9' 
-    : 'https://app.fuzedflow.com/signup?plan=price_1UAK8xIfI96QPT6lprie68A1';
-} else if (plan.name === 'Business') {
-  checkoutLink = isAnnual 
-    ? 'https://app.fuzedflow.com/signup?plan=price_1UAKBOIfI96QPT6lOL13LhkJ' 
-    : 'https://app.fuzedflow.com/signup?plan=price_1UAKBOIfI96QPT6lhwHxB4T3';
-}
+                const displayPrice = isAnnual ? plan.price : plan.monthlyPrice;
+                const billingText = isAnnual
+                  ? `Billed annually ($${plan.annualTotal.toLocaleString('en-US')} USD/year)`
+                  : 'Billed monthly';
+                const priceId = plan.priceIds[isAnnual ? 'annual' : 'monthly'];
+                const checkoutLink = `https://app.fuzedflow.com/signup?plan=${priceId}`;
 
                 return (
                   <motion.div
@@ -340,7 +324,7 @@ if (plan.name === 'Starter') {
                       <div className="my-4 md:my-6 flex flex-col gap-1">
                         <div className="flex items-end gap-1">
                           <span className="font-heading text-4xl md:text-5xl">{displayPrice}</span>
-                          <span className="mb-1 text-xl font-bold text-muted-foreground">/mo</span>
+                          <span className="mb-1 text-xl font-bold text-muted-foreground">/mo USD</span>
                         </div>
                         <span className="text-sm font-medium text-muted-foreground">{billingText}</span>
                       </div>

@@ -1,14 +1,18 @@
 import { secrets } from "base44:runtime";
 
 const PRICE_MAP = {
-  starter: {
-    monthly: "price_1U1SCG77fSzqvuFu06pRCudH",
-    annual: "price_1U1SCG77fSzqvuFuhCc9tnoT",
+  "starter": {
+    "monthly": "price_1UMs7VIfI96QPT6lT0RLG9JI",
+    "annual": "price_1UMs8KIfI96QPT6lP4aiTEwb"
   },
-  professional: {
-    monthly: "price_1U1SCG77fSzqvuFuHqq18x2s",
-    annual: "price_1U1SCG77fSzqvuFu0narZw9m",
+  "professional": {
+    "monthly": "price_1UMs8NIfI96QPT6l4fb4CV40",
+    "annual": "price_1UMs8SIfI96QPT6lCL8Uxd7b"
   },
+  "business": {
+    "monthly": "price_1UMs8VIfI96QPT6lKDent3gP",
+    "annual": "price_1UMs8ZIfI96QPT6liR9UtHga"
+  }
 };
 
 export default async function(req) {
