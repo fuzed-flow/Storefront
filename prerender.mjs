@@ -1,55 +1,25 @@
-import fs from 'fs';
-import path from 'path';
-import puppeteer from 'puppeteer';
-import { preview } from 'vite';
-
-const routes = [
-  '/',
-  '/faq',
-  '/contact',
-  '/terms',
-  '/privacy',
-  '/features/lead-management',
-  '/features/crm',
-  '/features/estimating',
-  '/features/smart-templates',
-  '/features/project-management',
-  '/features/scheduling',
-  '/features/daily-logs',
-  '/features/time-tracking',
-  '/features/change-orders',
-  '/features/purchase-orders',
-  '/features/inventory-management',
-  '/features/employee-portal',
-  '/features/hr-management',
-  '/features/client-portal',
-  '/features/invoicing',
-  '/features/expense-tracking',
-  '/features/reporting'
-];
-
-async function prerender() {
-  const server = await preview({ preview: { port: 3000 } });
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
-
-  for (const route of routes) {
-    const page = await browser.newPage();
-    await page.goto(`http://localhost:3000${route}`, { waitUntil: 'networkidle0' });
-    const html = await page.content();
-    
-    const targetDir = path.join(process.cwd(), 'dist', route);
-    fs.mkdirSync(targetDir, { recursive: true });
-    fs.writeFileSync(path.join(targetDir, 'index.html'), html);
-    console.log(`✓ Prerendered: ${route}`);
-    await page.close();
-  }
-
-  await browser.close();
-  server.httpServer.close();
-  process.exit(0);
-}
-
-prerender();
+import fs from 'node:fs';
+import path from 'node:path';
+import {createServer} from 'vite';
+import {features} from './src/data/features.js';
+import {resources} from './src/data/resources.js';
+import {industries} from './src/data/industries.js';
+export const routes=['/','/features','/pricing','/integrations','/resources','/workflow-example','/faq','/contact','/terms','/privacy',...features.map(f=>'/features/'+f.slug),...resources.map(r=>'/resources/'+r.slug),...industries.map(i=>'/industries/'+i.slug)];
+const site='https://www.fuzedflow.com';
+const template=fs.readFileSync('dist/index.html','utf8').replace(/<title>.*?<\/title>/s,'');
+let server;
+try{
+ server=await createServer({server:{middlewareMode:true},appType:'custom'});
+ const {render}=await server.ssrLoadModule('/src/server.jsx');
+ for(const route of [...routes,'/404']){
+  const {html,head}=render(route);
+  if((head.match(/name="description"/g)||[]).length!==1||(html.match(/<h1(?:\s|>)/g)||[]).length!==1||(route!='/404'&&/noindex/.test(head)))throw new Error('Invalid initial HTML: '+route);
+  if(!head.includes(site+route))throw new Error('Missing canonical: '+route);
+  const result=template.replace('</head>',head+'</head>').replace('<div id="root"></div>','<div id="root">'+html+'</div>');
+  const destination=route==='/404'?'dist/404.html':path.join('dist',route,'index.html');
+  fs.mkdirSync(path.dirname(destination),{recursive:true});fs.writeFileSync(destination,result);console.log('Prerendered '+route);
+ }
+ fs.writeFileSync('dist/sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+routes.map(route=>`  <url><loc>${site}${route}</loc></url>`).join('\n')+'\n</urlset>\n');
+ fs.writeFileSync('dist/robots.txt',`User-agent: *\nAllow: /\nSitemap: ${site}/sitemap.xml\n`);
+ console.log(`Verified ${routes.length} indexable pages and a noindex 404.`);
+}catch(error){console.error(error);process.exitCode=1;}finally{if(server)await server.close();}

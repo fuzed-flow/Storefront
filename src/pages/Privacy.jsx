@@ -45,6 +45,7 @@ export default function Privacy() {
       <main className="mx-auto max-w-4xl px-4 py-16 md:px-6 md:py-24">
         <div className="mb-12 border-b-4 border-primary pb-8">
           <h1 className="font-heading text-4xl uppercase leading-tight md:text-5xl">Privacy Policy</h1>
+          <p className="mt-6 text-slate-600">The storefront uses first-party web analytics and performance measurement to understand page visits and improve the site. Conversion events record actions such as trial links, demo requests and resource downloads without including form contents. Contact details submitted in a form are used to respond to your request.</p>
           <p className="mt-4 text-sm font-bold text-muted-foreground uppercase tracking-widest">
             Last Updated: August 2026
           </p>
