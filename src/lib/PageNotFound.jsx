@@ -1,19 +1,3 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle } from 'lucide-react';
-
-export default function PageNotFound() {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4 text-center">
-      <AlertTriangle className="mb-6 h-16 w-16 text-primary" />
-      <h1 className="font-heading text-4xl uppercase md:text-6xl">404 - Page Not Found</h1>
-      <p className="mt-4 text-lg text-muted-foreground">
-        The page you are looking for doesn't exist or has been moved.
-      </p>
-      <Button asChild className="mt-8 rounded-none bg-primary text-primary-foreground hover:bg-primary/90">
-        <Link to="/">Return to Home</Link>
-      </Button>
-    </div>
-  );
-}
+import Page,{Intro} from '@/components/shared/Page';
+export default function PageNotFound(){return <Page title="Page not found" description="This Fuzed Flow page could not be found. Explore features, plans and contractor resources." path="/404" noindex><div className="ff-shell"><Intro eyebrow="404" title="This page could not be found." description="Explore the current features and resources or return to the homepage."/><div className="ff-topic-links mb-16"><a className="ff-button" href="/">Home</a><a href="/features">Features</a><a href="/resources">Resources</a></div></div></Page>;}
