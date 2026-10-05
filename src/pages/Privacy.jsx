@@ -47,7 +47,7 @@ export default function Privacy() {
           <h1 className="font-heading text-4xl uppercase leading-tight md:text-5xl">Privacy Policy</h1>
           <p className="mt-6 text-slate-600">The storefront uses first-party web analytics and performance measurement to understand page visits and improve the site. Conversion events record actions such as trial links, demo requests and resource downloads without including form contents. Contact details submitted in a form are used to respond to your request.</p>
           <p className="mt-4 text-sm font-bold text-muted-foreground uppercase tracking-widest">
-            Last Updated: August 2026
+            Last Updated: October 2026
           </p>
         </div>
 
@@ -105,6 +105,10 @@ export default function Privacy() {
           <section>
             <h2 className="mb-4 font-heading text-2xl uppercase text-foreground">6. Your Privacy Rights</h2>
             <p>Subject to applicable law, you have the right to access, rectify, correct inaccuracies in, and withdraw consent to the collection or processing of your Personal Information. You may withdraw your consent at any time; however, withdrawing consent may result in your inability to continue using the Service.</p>
+          </section>
+          <section>
+            <h2 className="mb-4 font-heading text-2xl uppercase text-foreground">7. AI Rewrite</h2>
+            <p>When you choose AI Rewrite, the text in the selected field is sent to our AI provider, OpenAI, to generate revised wording. Review the text you submit and check the result before saving or sending. The rewrite usage log stores operational details such as account identifiers, character counts, request status and timing; it does not store the input or output text. Content you save in your normal app documents remains part of those records.</p>
           </section>
         </div>
       </main>

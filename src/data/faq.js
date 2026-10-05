@@ -62,7 +62,7 @@ export const faqs = [
   {
     "category": "Quotes & clients",
     "question": "What can a client see in the portal?",
-    "answer": "Quotes, change orders, invoices, quote documents and portfolio photos can be shared in the client document portal. Clients can review options, approve scope and open payment links."
+    "answer": "Your company can share quotes, change orders, invoices, supporting documents, published project updates and published project closeout checklists. Clients can review options, approve scope, open payment links and download available update or closeout PDFs. Portal settings control which sections are shown."
   },
   {
     "category": "Projects & materials",
@@ -163,5 +163,55 @@ export const faqs = [
     "category": "Support",
     "question": "How do I start a company or join a team?",
     "answer": "Start with your own signup to create a company. If you are joining an existing team, use the email your administrator invited. Each email currently belongs to one company account."
+  },
+  {
+    "category": "Projects & materials",
+    "question": "What does the Approvals Hub show?",
+    "answer": "Review client quote activity alongside pending change orders and purchase orders. Search by client, project or document, filter by status, open the relevant record and approve or reject pending change orders and purchase orders."
+  },
+  {
+    "category": "Projects & materials",
+    "question": "What can I include in a client project update?",
+    "answer": "Choose the project and update date, then add a summary, completed work, upcoming work and important client notes. Save a draft, preview a branded PDF, publish it to the Client Portal and send an email or text link."
+  },
+  {
+    "category": "Projects & materials",
+    "question": "Can I email or text a branded project update?",
+    "answer": "Yes. An email can include the branded PDF and a Client Portal link. A text message shares the portal link. Confirm the recipient and message before sending."
+  },
+  {
+    "category": "Projects & materials",
+    "question": "How do project closeout deficiency checklists work?",
+    "answer": "Create a checklist for the project, photograph each deficiency and choose a category such as Painting, Drywall or Tile. Add a description, assign a subcontractor and optionally set a due date. Track Open, In Progress, Ready for Review and Complete status."
+  },
+  {
+    "category": "Projects & materials",
+    "question": "Can I capture deficiency photos onsite and complete the checklist later?",
+    "answer": "Yes. Use Quick Photo Capture to save photos and add descriptions and trade assignments later. Use Guided Walkthrough to complete each item during the visit. Saving photos and checklist changes requires an internet connection."
+  },
+  {
+    "category": "Projects & materials",
+    "question": "Can I send each subcontractor only their assigned deficiencies?",
+    "answer": "Yes. The closeout delivery workflow creates a separate branded PDF package for each subcontractor with an email address and assigned items. Publish the client checklist separately when it is ready to share."
+  },
+  {
+    "category": "Team & help",
+    "question": "Which plans include AI Rewrite?",
+    "answer": "Professional and Business include AI Rewrite for supported long text fields with an active subscription or trial, subject to usage limits. New Starter plans do not include it. Existing subscriber access is preserved where earlier entitlements apply."
+  },
+  {
+    "category": "Team & help",
+    "question": "Where can I use AI Rewrite and Undo?",
+    "answer": "Use AI Rewrite in supported long text fields such as client update summaries, completed and upcoming work, client notes, quote line-item descriptions and internal notes. Expand or collapse the field for more writing space, review the result and use Undo to restore the previous text before saving or sending."
+  },
+  {
+    "category": "Team & help",
+    "question": "Is AI Rewrite unlimited?",
+    "answer": "Usage limits apply by user and company. If you reach a limit, the app explains when to retry. You can continue editing the field manually."
+  },
+  {
+    "category": "Team & help",
+    "question": "What information does AI Rewrite send to the AI provider?",
+    "answer": "When you choose AI Rewrite, the text in the selected field is sent to OpenAI to generate revised wording. Review the text you submit and check the result before saving or sending. The rewrite usage log records operational details such as character counts and request status, not the input or output text."
   }
 ];

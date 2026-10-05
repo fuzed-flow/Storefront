@@ -1,4 +1,4 @@
-// Cross-referenced with app workflows on 2026-10-04.
+// Cross-referenced with production app commit 785ab001b20bf5c2510b860effecf79ec5a1dd61 on 2026-10-05.
 export const features = [
   {
     "slug": "lead-management",
@@ -41,7 +41,7 @@ export const features = [
     "name": "Estimating & quoting",
     "group": "Sales & quotes",
     "tagline": "Build a clear scope with costs, phases and client options.",
-    "overview": "Build phased quotes with line items, material and labour costs, client prices, scope text and photos. Use company branding in PDFs and let clients choose optional items or phases before online approval.",
+    "overview": "Build phased quotes with line items, material and labour costs, client prices, scope text and photos. Use company branding in PDFs and let clients choose optional items or phases before online approval. Professional and Business include AI Rewrite with Undo for supported quote line-item descriptions and internal notes.",
     "howItWorks": [
       "Build the scope in phases and add priced line items.",
       "Review costs, gross margin, tax and optional upgrades.",
@@ -52,7 +52,8 @@ export const features = [
     "related": [
       "pricebook",
       "smart-templates",
-      "client-portal"
+      "approvals",
+      "ai-rewrite"
     ]
   },
   {
@@ -78,7 +79,7 @@ export const features = [
     "name": "Project management",
     "group": "Projects & field",
     "tagline": "Know what is planned, assigned, blocked and ordered.",
-    "overview": "Keep client and site information, phases, tasks, materials, plans, permits, subcontractors and linked documents in the project workspace. The phase cost comparison uses tracked materials with actual or estimated costs.",
+    "overview": "Keep client and site information, phases, tasks, materials, plans, permits, subcontractors and linked documents in the project workspace. Prepare client updates and closeout checklists alongside the job, and use the Approvals Hub to review pending document decisions.",
     "howItWorks": [
       "Open the project workspace and confirm scope and site details.",
       "Set phase dates and assign people and tasks.",
@@ -87,9 +88,11 @@ export const features = [
     "example": "Follow a renovation from demolition to finishes. A blocked phase, assigned task and Ordered material each describe a different part of the job.",
     "plan": "Starter: 5 active projects. Professional & Business: unlimited.",
     "related": [
-      "scheduling",
+      "approvals",
+      "client-updates",
+      "project-closeouts",
       "project-materials",
-      "plans-and-permits"
+      "scheduling"
     ]
   },
   {
@@ -125,7 +128,8 @@ export const features = [
     "plan": "All plans",
     "related": [
       "project-management",
-      "employee-portal"
+      "client-updates",
+      "ai-rewrite"
     ]
   },
   {
@@ -161,7 +165,8 @@ export const features = [
     "plan": "Professional & Business",
     "related": [
       "estimating",
-      "invoicing"
+      "invoicing",
+      "approvals"
     ]
   },
   {
@@ -179,7 +184,8 @@ export const features = [
     "plan": "All plans",
     "related": [
       "project-materials",
-      "inventory-management"
+      "inventory-management",
+      "approvals"
     ]
   },
   {
@@ -241,16 +247,18 @@ export const features = [
     "slug": "client-portal",
     "name": "Client portal",
     "group": "Sales & quotes",
-    "tagline": "Let clients review the documents that need a decision.",
-    "overview": "Share quotes, change orders, invoices, quote documents and portfolio photos through the customer document portal. Clients can select quote options, approve scope and open invoice payment links.",
+    "tagline": "Give clients the shared documents, updates and closeout checklist.",
+    "overview": "Share quotes, change orders, invoices, published project updates and published closeout checklists in the Client Portal. Clients can review quote options, approve scope, open payment links and download branded update or closeout PDFs. Your company chooses which portal sections are shown.",
     "howItWorks": [
-      "Share the client’s document link.",
-      "The client reviews quotes, options and supporting documents.",
-      "They approve scope or open the invoice payment view."
+      "Prepare the documents, project updates or deficiency checklist you want to share.",
+      "Publish reviewed updates and closeouts, then send the client’s portal link.",
+      "The client reviews the shared records, downloads available PDFs and takes the relevant document action."
     ],
-    "example": "A homeowner compares the base quote and optional fixture upgrade, then approves their selected scope.",
+    "example": "A homeowner checks the latest renovation update, reviews a published deficiency checklist and opens the remaining invoice from their portal.",
     "plan": "All plans; change orders require Professional or Business.",
     "related": [
+      "client-updates",
+      "project-closeouts",
       "estimating",
       "invoicing"
     ]
@@ -383,5 +391,136 @@ export const features = [
       "contractor-portal",
       "project-management"
     ]
+  },
+  {
+    "slug": "approvals",
+    "name": "Approvals Hub",
+    "group": "Projects & field",
+    "tagline": "Keep quote activity and pending approvals in view.",
+    "overview": "See client quote activity, pending change orders and purchase orders in one Approvals Hub. Search by client, project or document, filter by status, review the work behind a decision and approve or reject pending change orders and purchase orders.",
+    "howItWorks": [
+      "Open the action queue to review pending change orders and purchase orders.",
+      "Check client quote activity, then search or filter the document list.",
+      "Open the document, confirm the scope and record the next decision."
+    ],
+    "example": "A project manager checks a pending fixture change and a supplier purchase order before work proceeds, then follows up on a quote the homeowner has viewed.",
+    "plan": "Quote activity and purchase order approvals: all plans. Change orders: Professional & Business. Team access follows company permissions.",
+    "related": [
+      "estimating",
+      "change-orders",
+      "purchase-orders",
+      "client-updates"
+    ],
+    "faq": [
+      {
+        "question": "Which decisions appear in the action queue?",
+        "answer": "The action queue shows pending change orders and purchase orders awaiting approval. Client quotes have a separate activity view with document status and follow-up actions."
+      },
+      {
+        "question": "Can I follow up on a quote from the Approvals Hub?",
+        "answer": "Yes. Review quote activity, open the quote, copy its client link or resend the quote email from the hub."
+      }
+    ],
+    "headline": "Contractor approvals, with the next decision in view.",
+    "seoTitle": "Contractor approvals and quote activity",
+    "description": "Review quote activity, pending change orders and purchase order approvals in Fuzed Flow. Search by client or project and act on the next decision."
+  },
+  {
+    "slug": "client-updates",
+    "name": "Client project updates",
+    "group": "Projects & field",
+    "tagline": "Give clients a clear update on progress and upcoming work.",
+    "overview": "Prepare project updates with a summary, completed work, upcoming work and important client notes. Save a draft, preview a branded PDF, publish the update to the Client Portal and send it by email or text link. Professional and Business add AI Rewrite for supported writing fields.",
+    "howItWorks": [
+      "Choose the project and date, then write the summary, completed work, upcoming work and client notes.",
+      "Review the update and its branded PDF before publishing.",
+      "Publish to the Client Portal and send an email with a PDF or a text link."
+    ],
+    "example": "After rough-in, tell the homeowner what was completed, what inspection is next and when access is needed. Publish the reviewed update so the client can return to it later.",
+    "plan": "Client updates, branded PDFs and portal publishing: all plans. AI Rewrite: Professional & Business, subject to usage limits. Sending requires valid recipient details.",
+    "related": [
+      "client-portal",
+      "daily-logs",
+      "ai-rewrite",
+      "project-closeouts"
+    ],
+    "faq": [
+      {
+        "question": "Can I keep an update private until it is ready?",
+        "answer": "Yes. Save it as a draft while preparing the wording. Published updates appear in the Client Portal when that section is enabled."
+      },
+      {
+        "question": "How do clients receive a project update?",
+        "answer": "Email can include the branded PDF and a portal link. Text messages share the portal link. Review the recipient and message before sending."
+      }
+    ],
+    "headline": "Client project updates, ready to share.",
+    "seoTitle": "Client project update software for contractors",
+    "description": "Share completed work, upcoming work and client notes through branded project updates. Publish to the Client Portal and send email PDFs or text links."
+  },
+  {
+    "slug": "project-closeouts",
+    "name": "Project closeouts & deficiency checklists",
+    "group": "Projects & field",
+    "tagline": "Close out the job with a photo for every deficiency.",
+    "overview": "Create a project deficiency checklist on a phone, tablet or computer. Use Quick Photo Capture to photograph items onsite and add details later, or a Guided Walkthrough to complete each item as you go. Add a trade category, description, subcontractor, due date and status; share a branded checklist with the client and send each subcontractor their assigned items.",
+    "howItWorks": [
+      "Start a project closeout and choose Quick Photo Capture or Guided Walkthrough.",
+      "Photograph each deficiency, then add its category, description, assigned subcontractor and optional due date.",
+      "Track Open, In Progress, Ready for Review and Complete status; publish the client checklist or send trade-specific PDF packages."
+    ],
+    "example": "Photograph a paint touch-up and a tile grout repair during a bathroom walkthrough. Assign each to the relevant subcontractor, then review completion before marking the closeout complete.",
+    "plan": "All plans. Team access follows company project permissions. AI Rewrite in supported text fields: Professional & Business, subject to usage limits.",
+    "related": [
+      "client-updates",
+      "client-portal",
+      "contractor-portal",
+      "project-management"
+    ],
+    "faq": [
+      {
+        "question": "Can I take deficiency photos now and finish the details later?",
+        "answer": "Yes. Quick Photo Capture saves a photo for each item so you can add its description, category and subcontractor later. Saving requires an internet connection."
+      },
+      {
+        "question": "Does every subcontractor receive the full checklist?",
+        "answer": "The subcontractor email workflow creates a separate branded PDF package with that subcontractor’s assigned deficiencies. The client checklist can be published in the Client Portal and sent by email or text link."
+      }
+    ],
+    "headline": "Project closeouts, with a photo for every deficiency.",
+    "seoTitle": "Project closeout and deficiency checklist software",
+    "description": "Capture deficiency photos onsite, assign subcontractors and track completion. Share a branded closeout checklist and send each trade their assigned items."
+  },
+  {
+    "slug": "ai-rewrite",
+    "name": "AI Rewrite",
+    "group": "Team & help",
+    "tagline": "Turn rough job notes into clearer writing.",
+    "overview": "On Professional and Business, use AI Rewrite in supported long text fields, including client update summaries, completed and upcoming work, client notes, quote line-item descriptions and internal notes. Expand the field while writing, review the rewritten text and use Undo to restore the previous version before saving or sending.",
+    "howItWorks": [
+      "Write the facts in a supported text field and expand it when you need more room.",
+      "Choose AI Rewrite to improve the wording, then check names, dates, amounts and meaning.",
+      "Edit the result or use Undo to restore the original, then save or send through the normal workflow."
+    ],
+    "example": "Turn a rough note about completed framing and an upcoming inspection into a clear client update. Check the date and work status before publishing.",
+    "plan": "Included on Professional & Business with an active subscription or trial, subject to usage limits. New Starter plans do not include AI Rewrite.",
+    "related": [
+      "client-updates",
+      "estimating",
+      "project-closeouts"
+    ],
+    "faq": [
+      {
+        "question": "Is AI Rewrite unlimited?",
+        "answer": "AI Rewrite has usage limits by user and company. If a limit is reached, the app gives retry guidance. Professional and Business include access without a separate AI Rewrite add-on."
+      },
+      {
+        "question": "What text is sent for a rewrite?",
+        "answer": "When you choose AI Rewrite, the text in the selected field is sent to the AI provider, OpenAI, to generate revised wording. Review what you submit and check the result before saving or sending. You can use Undo to restore the previous text."
+      }
+    ],
+    "headline": "AI Rewrite for clearer job notes and client updates.",
+    "seoTitle": "AI Rewrite for contractor notes and client updates",
+    "description": "Improve supported long text fields with AI Rewrite, Undo and Expand. Included on Professional and Business, with usage limits and review before saving."
   }
 ];

@@ -13,6 +13,9 @@ export const plans = [
       "Estimating and reusable templates",
       "Invoicing and payment collection",
       "Client document portal",
+      "Client updates and branded PDFs",
+      "Photo deficiency checklists and project closeouts",
+      "Quote activity and purchase order approvals",
       "Project dashboard",
       "Email support"
     ]
@@ -30,6 +33,7 @@ export const plans = [
       "Everything in Starter",
       "Employee portal, HR and time tracking",
       "Change orders",
+      "AI Rewrite with Undo in supported text fields",
       "Advanced reporting"
     ]
   },

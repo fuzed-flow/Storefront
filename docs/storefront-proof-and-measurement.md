@@ -23,7 +23,7 @@ Do not publish numerical savings, revenue growth or a testimonial without the su
 
 ## Search Console rollout
 
-The build renders all 39 canonical pages and generates `/sitemap.xml`. Register or verify `https://www.fuzedflow.com` in Google Search Console using the business owner's account. Submit the sitemap and inspect `/features`, a feature page, an industry page and a resource page. Search Console account access is not supplied through the current deployment connectors.
+The build renders all 45 canonical pages and generates `/sitemap.xml`. Register or verify `https://www.fuzedflow.com` in Google Search Console using the business owner's account. Submit the sitemap and inspect `/features`, a feature page, an industry page and a resource page. Search Console account access is not supplied through the current deployment connectors.
 
 Record a baseline of indexed pages, impressions, clicks and query groups. Compare the same date windows after Google recrawls the site. Indexing and rankings are controlled by Google; a deploy or a sitemap does not establish a ranking gain.
 
@@ -45,3 +45,20 @@ Measure signup completion and subscription activation in the app/Stripe separate
 ## Service information requiring owner confirmation
 
 The public support address remains support@fuzedflow.com. A phone number, social profiles and support response-time promises are omitted until operationally confirmed. Business still includes account management and custom reporting; the team arranges those services. The internal PM client timeline remains separate from the public ClientPortal.
+
+## Latest app feature review — 5 October 2026
+
+Checked against production app commit `785ab001b20bf5c2510b860effecf79ec5a1dd61` and the active database/functions. The storefront now has 25 feature pages and 43 public FAQ answers. All 45 canonical routes are rendered at build time and included in the sitemap.
+
+| Public page | Evidence and boundary |
+| --- | --- |
+| `/features/approvals` | The visible hub has an action queue, quote activity, change orders and purchase orders. Internal review navigation remains hidden. Change orders require Professional/Business. |
+| `/features/client-updates` | Project/date, summary, completed/upcoming work and client notes; draft/publish; branded PDF; email and text delivery; published portal records. These are reviewed author-created updates. |
+| `/features/project-closeouts` | Quick photo capture or guided walkthrough; photo, category, description, vendor, optional due date and status; client publishing; separate trade PDF packages. Saving needs an internet connection. |
+| `/features/ai-rewrite` | Supported long text fields, quote line-item descriptions and internal notes; Rewrite, Undo and Expand/Collapse. Server entitlements enable Professional/Business with a current subscription/trial. User/company usage limits apply, with retry guidance. Existing subscriber access is preserved by the app’s prior entitlement override. |
+
+Starter, Professional and Business prices, yearly totals, included users, project limits and Stripe price IDs were preserved. No unlimited rewrite claim or fixed quota promise is published. AI Help remains product help; AI Rewrite is writing assistance. The privacy page states that selected-field text is sent to OpenAI when the user chooses Rewrite; the operational rewrite log excludes input/output text. The internal project timeline is still separate from the public portal.
+
+No customer messages, live rewrite-provider calls, charges or customer data fixtures were needed for this storefront review. Modelled examples remain illustrative.
+
+Two additional prospect resources provide a client project update outline and a project closeout/deficiency checklist. Both have downloadable Markdown copies and links to the matching product workflows.
