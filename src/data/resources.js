@@ -169,5 +169,96 @@ export const resources = [
       "time-tracking",
       "hr-management"
     ]
+  },
+  {
+    "slug": "client-project-update-template",
+    "title": "Client project update template",
+    "description": "A ready-to-use outline for completed work, upcoming work and client decisions during a construction project.",
+    "sections": [
+      [
+        "Copy this outline",
+        [
+          "Project / site: ____________________",
+          "Client / prepared by: ____________________",
+          "Update date / period: ____________________",
+          "Progress summary: ____________________",
+          "Completed work: one confirmed item per line.",
+          "Upcoming work: one planned item per line, with timing and dependencies where known.",
+          "Client decisions / access / important notes: ____________________"
+        ]
+      ],
+      [
+        "Before you share",
+        [
+          "Check that completed work describes what actually happened.",
+          "Confirm names, dates and any scheduling qualifications.",
+          "Keep internal cost notes separate from the client update.",
+          "Preview the branded PDF, then publish and send the reviewed update."
+        ]
+      ],
+      [
+        "Use it in Fuzed Flow",
+        [
+          "Create a draft under Client Updates and choose the project and date.",
+          "On Professional or Business, use AI Rewrite in supported fields, check the result and use Undo if needed.",
+          "Publish the update to the enabled Client Portal section and send an email PDF or text link."
+        ]
+      ]
+    ],
+    "related": [
+      "client-updates",
+      "ai-rewrite",
+      "client-portal"
+    ]
+  },
+  {
+    "slug": "project-closeout-checklist",
+    "title": "Project closeout and deficiency checklist",
+    "description": "Prepare a construction walkthrough with photos, trade assignments and clear completion status for each deficiency.",
+    "sections": [
+      [
+        "Prepare the walkthrough",
+        [
+          "Record the project, walkthrough date and people attending.",
+          "Choose quick photo capture or a guided checklist.",
+          "Review the areas and agreed scope you need to inspect."
+        ]
+      ],
+      [
+        "Record each deficiency",
+        [
+          "Item number / location: ____________________",
+          "Photo reference: ____________________",
+          "Type: Painting / Drywall / Tile / Flooring / Plumbing / Electrical / Other.",
+          "Description of the correction needed: ____________________",
+          "Assigned subcontractor: ____________________",
+          "Due date, if agreed: ____________________",
+          "Status: Open / In Progress / Ready for Review / Complete."
+        ]
+      ],
+      [
+        "Follow through",
+        [
+          "Add missing descriptions and trade assignments after a photo-only walkthrough.",
+          "Review the client version and publish it when ready to share.",
+          "Send each subcontractor the deficiencies assigned to them.",
+          "Review completed corrections and update item status.",
+          "Keep the final branded checklist with the project records."
+        ]
+      ],
+      [
+        "Use it in Fuzed Flow",
+        [
+          "Open Project Closeouts and choose Quick Photo Capture or Guided Walkthrough.",
+          "Save each photo online, then complete the type, description, assignment and optional due date.",
+          "Download a branded PDF, publish the checklist for the client or send trade-specific PDF packages."
+        ]
+      ]
+    ],
+    "related": [
+      "project-closeouts",
+      "client-updates",
+      "contractor-portal"
+    ]
   }
 ];

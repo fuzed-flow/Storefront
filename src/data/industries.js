@@ -9,11 +9,14 @@ export const industries = [
       "Build demolition, rough-in and finishes as quote phases; offer fixtures as optional items.",
       "The homeowner selects options and approves the quote online.",
       "Import selected Track Material items and follow their ordering status.",
-      "Record any added scope as a separate change order, then invoice the approved work."
+      "Record any added scope as a separate change order, then invoice the approved work.",
+      "Publish a reviewed progress update for the homeowner, then record photo deficiencies at the final walkthrough and assign follow-up work."
     ],
     "features": [
       "estimating",
-      "project-materials",
+      "approvals",
+      "client-updates",
+      "project-closeouts",
       "change-orders",
       "client-portal"
     ]
@@ -28,12 +31,15 @@ export const industries = [
       "Prepare selected scope and drawing revisions in the contractor portal.",
       "Send the current contractor link and request each trade’s quote.",
       "Use project notes, issues and material statuses to review what needs attention.",
-      "Invoice the agreed scope and track payments and outstanding balances."
+      "Invoice the agreed scope and track payments and outstanding balances.",
+      "Send a client progress update and prepare separate deficiency packages for the trades at closeout."
     ],
     "features": [
       "project-management",
       "contractor-portal",
-      "plans-and-permits",
+      "approvals",
+      "client-updates",
+      "project-closeouts",
       "invoicing"
     ]
   },
@@ -47,12 +53,14 @@ export const industries = [
       "Keep drawing titles, recorded revisions and permit attachments with the project.",
       "Plan phase dates and order materials against the relevant stage of the build.",
       "Record daily work, photos and blockers in the online workspace.",
-      "Create the invoice payment schedule and review partial payments and the remaining balance."
+      "Create the invoice payment schedule and review partial payments and the remaining balance.",
+      "Use client updates during the build and a branded photo checklist to organize the final deficiency walkthrough."
     ],
     "features": [
       "estimating",
       "plans-and-permits",
-      "daily-logs",
+      "client-updates",
+      "project-closeouts",
       "invoicing"
     ]
   }
