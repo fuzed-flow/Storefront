@@ -1,5 +1,6 @@
 import React from 'react';
 import LegalPage from '@/components/shared/LegalPage';
+import PhoneLink from '@/components/shared/PhoneLink';
 
 const sections = [
   {
@@ -9,7 +10,7 @@ const sections = [
       <p>Fuzed Flow ("we", "us" or "our") provides subscription software for contractors and trade businesses. This policy explains how we handle personal information through www.fuzedflow.com, app.fuzedflow.com, support, and the related client, employee and contractor portals.</p>
       <p>We offer the service in English to businesses in English-speaking countries worldwide, including Canada, the United States, the United Kingdom, Ireland, Australia and New Zealand, subject to applicable law and provider availability. Your privacy rights depend on the laws that apply to you; this policy does not replace those rights.</p>
       <p>We determine how account, billing, website and support information is used. For personal information a subscribing business puts into its workspace, such as customer and employee records, that business normally determines the purposes of processing and we handle the information to provide the service on its behalf. If your contractor or employer entered your information, contact that business about its records. We can help route a request.</p>
-      <p>Contact our privacy team at <a href="mailto:support@fuzedflow.com">support@fuzedflow.com</a>. You do not need an account to make a privacy request.</p>
+      <p>Contact our privacy team by calling <PhoneLink /> or using our <a href="/contact#contact">contact form</a>. You do not need an account to make a privacy request.</p>
     </>,
   },
   {
@@ -73,7 +74,7 @@ const sections = [
     title: 'International processing and data location',
     content: <>
       <p>Our current primary application database is hosted in the United States. Our team and service providers may process information in Canada, the United States and other countries where they operate. These countries may have different privacy laws, and information may be accessible to authorities under their laws. We do not offer a general promise that information stays in your country.</p>
-      <p>Where applicable law requires safeguards for an international transfer, we must use a permitted transfer arrangement. Depending on the provider and destination, this may involve a recognized adequacy decision, contractual protections such as standard contractual clauses and any required supplementary measures, or another lawful mechanism. Contact <a href="mailto:support@fuzedflow.com">support@fuzedflow.com</a> to ask about the arrangements applicable to your information and how to obtain details of relevant safeguards.</p>
+      <p>Where applicable law requires safeguards for an international transfer, we must use a permitted transfer arrangement. Depending on the provider and destination, this may involve a recognized adequacy decision, contractual protections such as standard contractual clauses and any required supplementary measures, or another lawful mechanism. Call <PhoneLink /> or use our <a href="/contact#contact">contact form</a> to ask about the arrangements applicable to your information and how to obtain details of relevant safeguards.</p>
       <p>If your business has particular data residency, employment or regulated-data requirements, contact us before uploading that information so we can establish whether the service is suitable.</p>
     </>,
   },
@@ -90,7 +91,7 @@ const sections = [
     id: 'retention',
     title: 'Security, retention and deletion',
     content: <>
-      <p>We use access permissions, company-based database restrictions, encrypted connections and other safeguards designed to protect information. No online service can guarantee complete security. Protect your account, review authorized users and shared links, and report a suspected security issue to <a href="mailto:support@fuzedflow.com">support@fuzedflow.com</a>.</p>
+      <p>We use access permissions, company-based database restrictions, encrypted connections and other safeguards designed to protect information. No online service can guarantee complete security. Protect your account, review authorized users and shared links, and report a suspected security issue by calling <PhoneLink /> or using our <a href="/contact#contact">contact form</a>.</p>
       <p>We retain account and workspace information while needed to provide the service and meet the business's instructions. Retention also depends on the purpose of the record, account status, legal or accounting requirements, unresolved disputes, security needs and backup cycles. We remove or de-identify information when it is no longer needed for those purposes. Copies in backups may remain until those backups are replaced, and providers may have their own retention obligations.</p>
       <p>Subscription cancellation stops billing as confirmed in the billing portal; it is not automatically a request to delete every workspace or transaction record. Contact support for deletion or export assistance. A deletion request may be subject to legal retention requirements and the subscribing business's authority over its records. We explain relevant limitations when responding.</p>
     </>,
@@ -108,7 +109,7 @@ const sections = [
         <li><strong>Australia and New Zealand:</strong> applicable privacy laws may provide access, correction and complaint rights, including complaints to the Office of the Australian Information Commissioner or New Zealand's Office of the Privacy Commissioner.</li>
         <li><strong>Other countries:</strong> contact us about rights provided by your applicable local law. The countries listed here do not limit where eligible businesses can use the English-language service.</li>
       </ul>
-      <p>Email <a href="mailto:support@fuzedflow.com">support@fuzedflow.com</a> with the subject "Privacy request" and tell us what you are requesting and which business or account is involved. We may ask for proportionate information to verify an access or deletion request. Please do not send a password or payment card details. We respond within the period required by applicable law and explain any permitted extension or refusal.</p>
+      <p>Use our <a href="/contact#contact">contact form</a> and start your message with "Privacy request", or call <PhoneLink />. Tell us what you are requesting and which business or account is involved. We may ask for proportionate information to verify an access or deletion request. Please do not send a password or payment card details. We respond within the period required by applicable law and explain any permitted extension or refusal.</p>
       <p>If the information belongs to a business's customer or employment records, we may need to refer your request to that business or act on its instructions. You can still contact us for help. Marketing choices, account preferences and a business's operational messages are separate; contact the sender or support if you need help stopping a message.</p>
     </>,
   },
@@ -125,7 +126,7 @@ const sections = [
     title: 'Policy changes and contact',
     content: <>
       <p>We update this policy as the service or our practices change and show the current revision date above. Where required, we provide notice of a material change and obtain any additional consent before using information for a new purpose that requires it. Continued use alone is not a substitute for consent where the law requires a separate choice.</p>
-      <p>For privacy, international transfer, security or data-processing questions, contact <a href="mailto:support@fuzedflow.com">support@fuzedflow.com</a>. Our <a href="/terms">Terms &amp; Conditions</a> explain subscription and service responsibilities.</p>
+      <p>For privacy, international transfer, security or data-processing questions, call <PhoneLink /> or use our <a href="/contact#contact">contact form</a>. Our <a href="/terms">Terms &amp; Conditions</a> explain subscription and service responsibilities.</p>
     </>,
   },
 ];

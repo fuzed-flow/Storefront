@@ -1,3 +1,5 @@
+import { SUPPORT_PHONE_LABEL } from '@/lib/contact';
+
 export const faqs = [
   {
     "category": "Plans & billing",
@@ -157,7 +159,7 @@ export const faqs = [
   {
     "category": "Support",
     "question": "How can I contact Fuzed Flow?",
-    "answer": "Email support@fuzedflow.com or use the contact form. For a walkthrough, request a demo and provide an email address so the team can reply."
+    "answer": `Call ${SUPPORT_PHONE_LABEL} or use the contact form. For a walkthrough, request a demo and provide an email address so the team can reply.`
   },
   {
     "category": "Support",

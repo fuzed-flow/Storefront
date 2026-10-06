@@ -29,6 +29,6 @@ All references below were retrieved October 5, 2026. They inform specific disclo
 
 ## Maintenance boundaries
 
-Keep vendor, feature, billing and residency statements synchronized with deployed behaviour. Retention criteria are stated rather than inventing a deletion deadline or retention schedule. Support remains `support@fuzedflow.com`; no new email address, registered corporate identity, physical address, governing jurisdiction, DPO, EU/UK representative or contractual transfer mechanism has been invented.
+Keep vendor, feature, billing and residency statements synchronized with deployed behaviour. Retention criteria are stated rather than inventing a deletion deadline or retention schedule. Public support uses the owner-confirmed `1(855) 904-5509` and the contact form; no registered corporate identity, physical address, governing jurisdiction, DPO, EU/UK representative or contractual transfer mechanism has been invented.
 
 The operator must maintain the applicable vendor agreements and transfer safeguards, assess local representation requirements, and verify its actual ChatGPT product/data controls. A public policy cannot establish those arrangements by itself. Add confirmed operator/representative details when available. The copy intentionally does not promise global certification, guaranteed isolation, zero retention, worldwide payment-provider availability or tax-free international subscriptions.

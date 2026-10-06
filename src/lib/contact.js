@@ -1,0 +1,3 @@
+export const SUPPORT_PHONE_LABEL = '1(855) 904-5509';
+export const SUPPORT_PHONE_NUMBER = '+18559045509';
+export const SUPPORT_PHONE_HREF = `tel:${SUPPORT_PHONE_NUMBER}`;

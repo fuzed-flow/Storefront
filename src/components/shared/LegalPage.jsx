@@ -1,7 +1,8 @@
 import React from 'react';
 import Page, { Intro } from './Page';
+import PhoneLink from './PhoneLink';
 
-export const LEGAL_UPDATED = '2026-10-05';
+export const LEGAL_UPDATED = '2026-10-06';
 
 export default function LegalPage({ title, description, path, introduction, sections, related }) {
   return (
@@ -22,10 +23,10 @@ export default function LegalPage({ title, description, path, introduction, sect
       <article className="ff-shell ff-article pb-16">
         <Intro eyebrow="Your service, data and rights" title={title} description={introduction} />
         <p className="text-sm font-semibold text-slate-600">
-          Last updated: <time dateTime={LEGAL_UPDATED}>October 5, 2026</time>
+          Last updated: <time dateTime={LEGAL_UPDATED}>October 6, 2026</time>
         </p>
         <div className="ff-plan-note mt-6">
-          Questions about this page? <a className="!ml-0 underline underline-offset-4" href="mailto:support@fuzedflow.com">support@fuzedflow.com</a>
+          Questions about this page? Call <PhoneLink className="!ml-0 underline underline-offset-4" /> or use our <a className="!ml-0 underline underline-offset-4" href="/contact#contact">contact form</a>.
           <a className="mt-2 inline-block underline underline-offset-4 sm:mt-0" href={related.path}>{related.label}</a>
         </div>
         <nav aria-label={`${title} sections`} className="my-10 border-y border-slate-200 py-6">

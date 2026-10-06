@@ -44,7 +44,7 @@ Measure signup completion and subscription activation in the app/Stripe separate
 
 ## Service information requiring owner confirmation
 
-The public support address remains support@fuzedflow.com. A phone number, social profiles and support response-time promises are omitted until operationally confirmed. Business still includes account management and custom reporting; the team arranges those services. The internal PM client timeline remains separate from the public ClientPortal.
+The public support phone number is 1(855) 904-5509, confirmed by the owner on 6 October 2026. No email addresses are displayed on the storefront; contact and demo notifications use a server-side inbox destination. Social profiles and support response-time promises are omitted until operationally confirmed. Business still includes account management and custom reporting; the team arranges those services. The internal PM client timeline remains separate from the public ClientPortal.
 
 ## Latest app feature review — 5 October 2026
 

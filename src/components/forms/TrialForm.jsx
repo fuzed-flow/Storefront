@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, ShieldCheck, Rocket } from 'lucide-react';
+import { ArrowRight, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -77,7 +77,7 @@ export default function TrialForm() {
       <div className="grid gap-3 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="trial-email">Email *</Label>
-          <Input name="email" id="trial-email" type="email" required placeholder="you@company.com" className="rounded-none" />
+          <Input name="email" id="trial-email" type="email" required placeholder="Your email address" className="rounded-none" />
         </div>
         <div className="space-y-2">
           <Label htmlFor="trial-company">Company</Label>
