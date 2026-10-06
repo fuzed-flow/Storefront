@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, ArrowLeft, ShieldCheck, MessageSquareText, Mail, Phone, Map } from 'lucide-react';
+import { ArrowRight, ArrowLeft, ShieldCheck, MessageSquareText, Phone, Map } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import PhoneLink from '@/components/shared/PhoneLink';
 
 // Import your Supabase client
 import { supabase } from '@/lib/supabase';
@@ -77,16 +78,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs font-black uppercase text-muted-foreground">Call Us</p>
-                  <p className="font-bold">(555) 018-2024</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center border border-border bg-muted/50">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs font-black uppercase text-muted-foreground">Email</p>
-                  <p className="font-bold">hello@fuzedflow.com</p>
+                  <p className="font-bold"><PhoneLink /></p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -130,7 +122,7 @@ export default function Contact() {
                 
                 <div className="space-y-2">
                   <Label htmlFor="contact-email">Email Address</Label>
-                  <Input name="email" id="contact-email" type="email" placeholder="you@company.com" className="rounded-none" />
+                  <Input name="email" id="contact-email" type="email" placeholder="Your email address" className="rounded-none" />
                 </div>
                 
                 <div className="space-y-2">

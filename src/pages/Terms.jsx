@@ -1,5 +1,6 @@
 import React from 'react';
 import LegalPage from '@/components/shared/LegalPage';
+import PhoneLink from '@/components/shared/PhoneLink';
 
 const sections = [
   {
@@ -42,7 +43,7 @@ const sections = [
     id: 'cancellation',
     title: 'Cancellation, refunds and data',
     content: <>
-      <p>Manage or cancel your subscription through the billing management features in the app. If you cannot access them, contact <a href="mailto:support@fuzedflow.com">support@fuzedflow.com</a> for assistance. Check the confirmation and effective cancellation date. To avoid the next recurring charge, cancel before the renewal date; for a trial, cancel before its end.</p>
+      <p>Manage or cancel your subscription through the billing management features in the app. If you cannot access them, call <PhoneLink /> or use our <a href="/contact#contact">contact form</a> for assistance. Check the confirmation and effective cancellation date. To avoid the next recurring charge, cancel before the renewal date; for a trial, cancel before its end.</p>
       <p>Fees are billed in advance. Except where required by law or expressly agreed by us, we do not provide refunds or credits for unused time or a change of mind. This policy does not limit statutory refunds, cooling-off rights or remedies available under applicable consumer law.</p>
       <p>Cancellation of a subscription, deletion of a user and deletion of a business workspace are separate actions. Export records you need and ask support about export or deletion assistance. Retention, backups and any records we must keep are addressed in the <a href="/privacy#retention">Privacy Policy</a>.</p>
     </>,
@@ -105,7 +106,7 @@ const sections = [
     id: 'disputes',
     title: 'Questions and disputes',
     content: <>
-      <p>Contact <a href="mailto:support@fuzedflow.com">support@fuzedflow.com</a> with service, billing or contractual concerns so we can try to resolve them. Include the account or company concerned and a description of the issue; do not send a password or payment card details.</p>
+      <p>Call <PhoneLink /> or use our <a href="/contact#contact">contact form</a> with service, billing or contractual concerns so we can try to resolve them. Include the account or company concerned and a description of the issue; do not send a password or payment card details.</p>
       <p>If a dispute cannot be resolved, the courts, law and complaint procedures with jurisdiction under applicable law remain available. These Terms do not impose mandatory arbitration or require you to waive a statutory right to bring a claim, use an applicable collective procedure, contact a regulator or seek remedies in a court available to you under mandatory local law.</p>
     </>,
   },
