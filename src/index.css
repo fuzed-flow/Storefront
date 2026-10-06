@@ -104,3 +104,86 @@
 @media(max-width:540px){.ff-shell{width:calc(100% - 32px)}.ff-card-grid{grid-template-columns:1fr}.ff-section{padding-block:38px}.ff-example{padding:24px}.ff-card{padding:25px}.ff-hero-actions .ff-button{width:100%}.ff-form{padding:22px}.ff-price-card{padding:25px}.ff-billing-toggle button{flex:1}.ff-intro h1,.ff-hero h1{font-size:38px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 @media print{.ff-header,.ff-footer,.ff-button,.ff-skip,.ff-topic-links{display:none!important}.ff-shell{width:100%}.ff-section,.ff-intro{padding:15px 0}.ff-example{break-inside:avoid}details>p{display:block!important}}
+
+/* Integration cards keep each connection and its status together on phones. */
+.ff-integration-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ff-integration-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid #d4d7db;
+  overflow-wrap: anywhere;
+}
+
+.ff-integration-card + .ff-integration-card {
+  margin-top: 16px;
+}
+
+.ff-integration-card h2 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+
+.ff-integration-card p {
+  margin: 0;
+  color: #505763;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.ff-integration-status {
+  display: inline-block;
+  max-width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #d4d7db;
+  background: #f3f4f5;
+  color: #3d434d;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.6;
+  white-space: normal;
+}
+
+.ff-integration-status-available {
+  border-color: #d9b656;
+  background: #fffaec;
+  color: #705000;
+}
+
+.ff-integrations-table th:first-child {
+  width: 30%;
+}
+
+.ff-integrations-table th:nth-child(2) {
+  width: 20%;
+}
+
+.ff-integrations .ff-migration-steps {
+  list-style: decimal;
+}
+
+@media (max-width: 767px) {
+  .ff-integrations .ff-intro {
+    padding-bottom: 28px;
+  }
+
+  .ff-integrations .ff-integration-list {
+    padding-top: 0;
+  }
+
+  .ff-integrations .ff-integration-contact,
+  .ff-integrations .ff-cta-strip .ff-button {
+    width: 100%;
+  }
+}
