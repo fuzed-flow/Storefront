@@ -187,3 +187,6 @@
     width: 100%;
   }
 }
+
+/* Footer social links remain easy to tap on phones and visibly focusable. */
+.ff-social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.ff-footer .ff-social-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0;border:1px solid #5a5d63;color:#fff;transition:background .15s,border-color .15s,color .15s}.ff-footer .ff-social-link:hover{background:#ffbf00;border-color:#ffbf00;color:#111}
