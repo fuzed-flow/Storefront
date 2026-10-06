@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   BellRing, 
-  Mail, 
-  MessageSquare, 
   ToggleRight, 
   ToggleLeft, 
   Settings2,
-  Clock,
-  ArrowRight
+  Clock
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
