@@ -58,6 +58,11 @@ export const faqs = [
   },
   {
     "category": "Quotes & clients",
+    "question": "What happens when a lead's quote becomes a project or invoice?",
+    "answer": "Fuzed Flow can convert the qualified lead into a client as the linked quote becomes a project or invoice. It carries the connected quote and contact context forward while checking for an existing matching client to reduce duplicate records."
+  },
+  {
+    "category": "Quotes & clients",
     "question": "Is gross margin the same as markup?",
     "answer": "No. Margin is profit divided by selling price; markup is profit divided by cost. A $7,500 cost and $10,000 price produce 25% gross margin and 33.33% markup. See the worked margin guide."
   },
@@ -99,7 +104,12 @@ export const faqs = [
   {
     "category": "Team & help",
     "question": "Is this a mobile app?",
-    "answer": "Fuzed Flow is a web application you can open in a browser on a phone, tablet or computer. Employees use a focused mobile web portal for assigned work and submissions."
+    "answer": "Fuzed Flow is a responsive web application you can install from a supported browser on iPhone, iPad, Android and Windows devices. It opens from the home screen or desktop while continuing to use the secure online service. Employees use a focused mobile portal for assigned work and submissions."
+  },
+  {
+    "category": "Team & help",
+    "question": "Does the installed app work offline?",
+    "answer": "Installation gives faster access from the home screen, Start menu or desktop, but current job records still require an internet connection. Fuzed Flow does not currently queue project changes for later offline synchronization."
   },
   {
     "category": "Team & help",
@@ -134,7 +144,7 @@ export const faqs = [
   {
     "category": "Integrations & payments",
     "question": "Can I track partial and staged invoice payments?",
-    "answer": "Yes. Use an invoice payment schedule and record partial payments. On a $10,000 invoice, a confirmed $2,000 payment leaves an $8,000 balance. Scheduled milestones do not automatically charge the customer."
+    "answer": "Yes. Use an invoice payment schedule and share the next available milestone payment link. On a $10,000 invoice, a confirmed $2,000 payment leaves an $8,000 balance. A customer can return for a later milestone, and confirmed Stripe payments can generate a receipt. Scheduled milestones do not automatically charge the customer."
   },
   {
     "category": "Integrations & payments",

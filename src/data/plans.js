@@ -17,7 +17,7 @@ export const plans = [
       "Photo deficiency checklists and project closeouts",
       "Quote activity and purchase order approvals",
       "Project dashboard",
-      "Email support"
+      "Phone and contact-form support"
     ]
   },
   {

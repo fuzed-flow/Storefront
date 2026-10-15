@@ -1,8 +1,6 @@
 import React from 'react';
 import { Zap } from 'lucide-react';
 
-const APP_URL = 'https://app.fuzedflow.com';
-
 export default function FloatingTrialButton() {
   return (
     <a

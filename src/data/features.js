@@ -1,17 +1,17 @@
-// Cross-referenced with production app commit 785ab001b20bf5c2510b860effecf79ec5a1dd61 on 2026-10-05.
+// Cross-referenced with production app changes through 2026-10-14.
 export const features = [
   {
     "slug": "lead-management",
     "name": "Lead management",
     "group": "Sales & quotes",
     "tagline": "Keep enquiries, ownership and the next follow-up together.",
-    "overview": "Record leads manually or import a CSV. Track seven pipeline stages, source, estimated value, assigned team member and a follow-up date. Convert qualified enquiries into quoting or project work.",
+    "overview": "Record leads manually or import a CSV. Track seven pipeline stages, source, estimated value, assigned team member and a follow-up date. When a linked quote becomes a project or invoice, convert the qualified lead into a client while checking for an existing matching client.",
     "howItWorks": [
       "Capture contact details, site address, notes and files.",
       "Choose a stage and assign the enquiry to a team member.",
-      "Set the next follow-up date and convert the lead when ready."
+      "Prepare the quote, then carry the lead into the connected client record when the work becomes a project or invoice."
     ],
-    "example": "A renovation enquiry moves from New to Qualified after a site visit. Record the address, photos and requested scope before preparing the quote.",
+    "example": "A renovation enquiry moves from New to Qualified after a site visit. Record the address, photos and scope; when its quote becomes a project, the linked lead is converted into the client record without re-entering the job contact.",
     "plan": "All plans",
     "related": [
       "crm",
@@ -211,7 +211,7 @@ export const features = [
     "name": "Employee portal",
     "group": "Team & help",
     "tagline": "Give the crew a focused view of their work.",
-    "overview": "The mobile web portal includes assigned work and schedules, a time clock, timesheets, estimated pay, leave requests, expenses, tasks, project notes and inventory according to company settings and role.",
+    "overview": "The installable mobile web portal includes assigned work and schedules, a time clock, timesheets, estimated pay, leave requests, expenses, tasks, project notes and inventory according to company settings and role. Install it from a supported browser on iPhone, iPad, Android or Windows; current records still require an internet connection.",
     "howItWorks": [
       "An invited employee signs in using their own account.",
       "Open assigned work or clock in from the portal.",
@@ -268,13 +268,13 @@ export const features = [
     "name": "Invoicing & payments",
     "group": "Money & purchasing",
     "tagline": "Invoice agreed scope and track the remaining balance.",
-    "overview": "Build invoices from quote or change-order scope and phases. Track staged payments, partial payments and receipts. Connect your company’s Stripe account for online invoice and approved quote-deposit payments.",
+    "overview": "Build invoices from quote or change-order scope and phases. Track staged and partial payments, let a client return to pay the next available invoice milestone, and send receipts for confirmed Stripe payments. Connect your company’s Stripe account for online invoice and approved quote-deposit payments.",
     "howItWorks": [
       "Build the invoice from the agreed work and set payment terms.",
-      "Share the invoice or an approved quote’s deposit payment link.",
-      "Confirmed payments update balances; send a receipt for selected payments."
+      "Share the invoice, an approved quote deposit link or the next invoice milestone payment link.",
+      "Confirmed Stripe payments update balances; send the customer a receipt."
     ],
-    "example": "On a $10,000 invoice, a confirmed $2,000 payment leaves $8,000 outstanding. A quote deposit is carried into the first linked invoice.",
+    "example": "On a $10,000 invoice, a confirmed $2,000 milestone leaves $8,000 outstanding. The customer can return to the secure invoice view for the next payable milestone and receive a Stripe receipt after payment.",
     "plan": "All plans",
     "related": [
       "change-orders",

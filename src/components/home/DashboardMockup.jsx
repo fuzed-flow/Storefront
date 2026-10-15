@@ -25,7 +25,7 @@ export default function DashboardMockup({ title = 'Command Center', compact = fa
         {!compact && (
           <div className="border border-border p-3">
             <p className="mb-3 text-sm font-bold">Crew Schedule</p>
-            {['Framing Crew', 'Electrical', 'Inspection', 'Invoice Sent'].map((item, index) => <div key={item} className="mb-2 flex items-center gap-2"><span className="h-8 w-1.5 bg-primary" /><span className="flex-1 border border-border px-3 py-2 text-sm">{item}</span><Check className="h-4 w-4" /></div>)}
+            {['Framing Crew', 'Electrical', 'Inspection', 'Invoice Sent'].map(item => <div key={item} className="mb-2 flex items-center gap-2"><span className="h-8 w-1.5 bg-primary" /><span className="flex-1 border border-border px-3 py-2 text-sm">{item}</span><Check className="h-4 w-4" /></div>)}
           </div>
         )}
       </div>

@@ -8,7 +8,7 @@ export function PricingCards() {
   return <>
     <div className="ff-billing-toggle" role="group" aria-label="Billing period">
       <button aria-pressed={!annual} onClick={() => setAnnual(false)}>Monthly</button>
-      <button aria-pressed={annual} onClick={() => setAnnual(true)}>Annual</button>
+      <button aria-pressed={annual} onClick={() => setAnnual(true)}>Annual · save</button>
     </div>
     <div className="grid gap-6 lg:grid-cols-3">
       {plans.map(plan => <article key={plan.id} className={`ff-price-card ${plan.id === 'professional' ? 'ff-price-featured' : ''}`}>
@@ -16,6 +16,7 @@ export function PricingCards() {
         <h3>{plan.name}</h3>
         <p className="ff-price">${annual ? plan.annual / 12 : plan.monthly}<span> USD/month</span></p>
         <p className="ff-price-billing">{annual ? `$${plan.annual.toLocaleString('en-US')} USD billed annually` : `$${plan.monthly} USD billed monthly`}</p>
+        {annual&&<p className="ff-annual-saving">Save ${(plan.monthly*12-plan.annual).toLocaleString('en-US')} USD per year</p>}
         <p className="mt-5 font-bold">{plan.users} {plan.users === 1 ? 'user' : 'users'} included · {plan.projects}</p>
         <ul className="ff-check-list">{plan.includes.map(feature => <li key={feature}>{feature}</li>)}</ul>
         <a className="ff-button" href={`https://app.fuzedflow.com/signup?plan=${annual ? plan.annualId : plan.monthlyId}`} data-event="trial_start" data-plan={plan.id} data-cycle={annual ? 'annual' : 'monthly'}>Start 14-day trial →</a>
@@ -40,28 +41,37 @@ export default function Pricing() {
     ['Advanced permissions', '—', '—', 'Included'],
     ['Dedicated account manager and custom reporting', '—', '—', 'Included'],
   ];
-  return <Page title="Pricing in USD: Starter, Professional and Business" description="Compare Fuzed Flow plans from $29 USD/month, including client updates and closeouts. Professional and Business add AI Rewrite. Start a 14-day trial." path="/pricing" schema={[{
-    '@type': 'SoftwareApplication', name: 'Fuzed Flow', applicationCategory: 'BusinessApplication', operatingSystem: 'Web browser',
-    offers: plans.map(plan => ({ '@type': 'Offer', name: plan.name, price: plan.monthly, priceCurrency: 'USD', url: 'https://www.fuzedflow.com/pricing', priceSpecification: { '@type': 'UnitPriceSpecification', price: plan.monthly, priceCurrency: 'USD', unitText: 'month' } })),
-  }]}>
+  const mobilePlanNames=['Starter','Professional','Business'];
+  const schema=[
+    {'@type':'BreadcrumbList',itemListElement:[{ '@type':'ListItem',position:1,name:'Home',item:'https://www.fuzedflow.com/'},{'@type':'ListItem',position:2,name:'Pricing',item:'https://www.fuzedflow.com/pricing'}]},
+    {
+      '@type': 'SoftwareApplication', name: 'Fuzed Flow', applicationCategory: 'BusinessApplication', operatingSystem: 'Web browser',
+      offers: plans.flatMap(plan => [
+        { '@type': 'Offer', name: `${plan.name} monthly`, price: plan.monthly, priceCurrency: 'USD', url: 'https://www.fuzedflow.com/pricing', priceSpecification: { '@type': 'UnitPriceSpecification', price: plan.monthly, priceCurrency: 'USD', unitText: 'month' } },
+        { '@type': 'Offer', name: `${plan.name} annual`, price: plan.annual, priceCurrency: 'USD', url: 'https://www.fuzedflow.com/pricing', priceSpecification: { '@type': 'UnitPriceSpecification', price: plan.annual, priceCurrency: 'USD', unitText: 'year' } },
+      ]),
+    },
+  ];
+  return <Page title="Pricing in USD: Starter, Professional and Business" description="Compare Fuzed Flow plans from $29 USD monthly or $21 USD/month equivalent on annual Starter billing. Start a 14-day trial." path="/pricing" schema={schema}>
     <div className="ff-shell">
       <Intro eyebrow="Clear plans · USD billing" title="Choose the workspace for your crew." description="Keep clients informed and organize your project closeouts on every plan. Professional and Business add AI Rewrite and team workflows. Start with a 14-day trial." />
       <PricingCards />
       <section className="ff-section">
         <h2>Compare plans</h2>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto hidden md:block">
           <table className="ff-table">
             <thead><tr>{['Feature', 'Starter', 'Professional', 'Business'].map(name => <th scope="col" key={name}>{name}</th>)}</tr></thead>
             <tbody>{rows.map(([name, ...values]) => <tr key={name}><th scope="row">{name}</th>{values.map((value, i) => <td key={i}>{value}</td>)}</tr>)}</tbody>
           </table>
         </div>
+        <div className="ff-mobile-comparison md:hidden">{mobilePlanNames.map((planName,planIndex)=><article key={planName}><h3>{planName}</h3><ul className="ff-resource-list">{rows.map(([name,...values])=>values[planIndex]!=='—'&&<li key={name}><strong>{name}:</strong> {values[planIndex]}</li>)}</ul></article>)}</div>
         <p className="mt-5">AI Rewrite is available with an active Professional or Business subscription or trial, subject to user and company usage limits. Review the wording before saving or sending. <Link to="/features/ai-rewrite">See AI Rewrite and Undo →</Link></p>
         <p className="mt-5">Business account management and custom reporting are arranged with the Fuzed Flow team. Contact us about the setup and reporting support you need.</p>
       </section>
       <section className="ff-example">
-        <h2>Need a larger setup?</h2>
-        <p>Discuss user configurations, onboarding, training and support requirements with the team.</p>
-        <a className="ff-button mt-5" href="/contact">Discuss an Enterprise plan →</a>
+        <h2>Need more than 10 users?</h2>
+        <p>Discuss additional users, onboarding, training and support requirements with the team. Extra users are $29 USD/month each or $348 USD/year each.</p>
+        <a className="ff-button mt-5" href="/contact">Discuss a larger team setup →</a>
       </section>
     </div>
   </Page>;

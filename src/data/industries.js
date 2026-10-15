@@ -63,5 +63,65 @@ export const industries = [
       "project-closeouts",
       "invoicing"
     ]
+  },
+  {
+    "slug": "remodeling-contractors",
+    "title": "Software for remodeling contractors",
+    "description": "Connect estimates, client selections, job updates, staged payments and punch-list closeouts across a residential remodeling project.",
+    "scenario": "A kitchen remodel with client options and staged payments",
+    "steps": [
+      "Capture the homeowner, property details, photos and requested changes in the lead record.",
+      "Build the estimate in phases and offer selected fixtures or finishes as client options.",
+      "Carry the approved scope into the project and track the materials that need ordering.",
+      "Publish clear progress updates with completed work, upcoming work and client decisions.",
+      "Collect scheduled invoice payments and keep the confirmed balance visible.",
+      "Photograph punch-list items, assign follow-up work and publish the reviewed closeout checklist."
+    ],
+    "features": ["lead-management", "estimating", "project-materials", "client-updates", "invoicing", "project-closeouts"]
+  },
+  {
+    "slug": "plumbing-contractors",
+    "title": "Software for plumbing contractors",
+    "description": "Keep service enquiries, quoted plumbing scope, assigned work, materials, invoices and client records connected.",
+    "scenario": "A multi-stage repipe and fixture replacement",
+    "steps": [
+      "Record the property, access notes, photographs and requested plumbing work.",
+      "Quote the repipe, access requirements and fixture options as clear phases and line items.",
+      "Convert the approved quote into the client and project records without re-entering the contact.",
+      "Assign work, record site notes and track ordered fittings or fixtures.",
+      "Send a project update before inspection or restoration work begins.",
+      "Invoice agreed milestones, record confirmed payments and close out remaining deficiencies."
+    ],
+    "features": ["lead-management", "estimating", "project-management", "daily-logs", "invoicing", "client-updates"]
+  },
+  {
+    "slug": "electrical-contractors",
+    "title": "Software for electrical contractors",
+    "description": "Organize electrical estimates, field assignments, material records, change orders and customer payments in one job workflow.",
+    "scenario": "A panel upgrade with added lighting scope",
+    "steps": [
+      "Capture the site conditions, panel information, requested circuits and photographs.",
+      "Quote the base electrical scope and keep optional lighting upgrades separate.",
+      "Plan assigned work and store the relevant drawing or permit attachments with the project.",
+      "Document added devices or changed routing as a separate change order.",
+      "Send the client a progress update before inspection and energization milestones.",
+      "Invoice the approved work, share a payment link and record the remaining balance."
+    ],
+    "features": ["estimating", "plans-and-permits", "scheduling", "change-orders", "client-updates", "invoicing"]
+  },
+  {
+    "slug": "specialty-contractors",
+    "title": "Software for specialty contractors",
+    "description": "Use repeatable quotes, project assignments, purchase records and client communication for focused trade work.",
+    "scenario": "A repeatable trade package with supplier and client coordination",
+    "steps": [
+      "Capture the enquiry and confirm the site, contact and requested trade scope.",
+      "Start from a reusable quote or phase template and review current costs.",
+      "Convert approved work into a project and assign the responsible team member.",
+      "Track purchase orders and job materials separately from general stock inventory.",
+      "Share a concise client update when a delivery, inspection or site condition changes the plan.",
+      "Invoice the agreed scope and document final deficiencies before closeout."
+    ],
+    "features": ["smart-templates", "pricebook", "project-management", "purchase-orders", "client-updates", "project-closeouts"]
   }
 ];
