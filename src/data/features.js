@@ -41,14 +41,92 @@ export const features = [
     "name": "Estimating & quoting",
     "group": "Sales & quotes",
     "tagline": "Build a clear scope with costs, phases and client options.",
-    "overview": "Build phased quotes with line items, material and labour costs, client prices, scope text and photos. Use company branding in PDFs and let clients choose optional items or phases before online approval. Professional and Business include AI Rewrite with Undo for supported quote line-item descriptions and internal notes.",
+    "seoTitle": "Contractor estimating and quoting software",
+    "description": "Create phased contractor estimates with labour, materials, margins, options, branded PDFs and online client approvals in one connected workflow.",
+    "headline": "Create contractor estimates that explain the scope and protect the margin.",
+    "overview": "Build phased quotes with line items, material and labour costs, client prices, scope text and photos. Review the cost-to-revenue margin before sharing a branded PDF, then let the client choose optional items or phases before online approval. Professional and Business include AI Rewrite with Undo for supported quote line-item descriptions and internal notes.",
+    "benefitTitle": "Turn job knowledge into a quote the office and client can follow",
+    "benefits": [
+      {
+        "title": "Scope the work by phase",
+        "text": "Separate demolition, rough-ins, finishes and other stages so inclusions, quantities and responsibilities are easier to review."
+      },
+      {
+        "title": "See cost and margin before sending",
+        "text": "Compare material and labour costs with client pricing, discounts, tax, deposits and the resulting gross margin inside the quote builder."
+      },
+      {
+        "title": "Give clients clear choices",
+        "text": "Present optional phases or upgrades in the shared quote so selected choices become part of the approved total and recorded scope."
+      }
+    ],
+    "image": {
+      "src": "https://ochqexofahdssmarnict.supabase.co/storage/v1/object/public/screenshots/contractor-estimating-software-quote-builder.webp",
+      "alt": "Fuzed Flow contractor estimate builder showing phased scope and priced line items",
+      "caption": "Build the scope in phases, then review the numbers before the quote reaches the client."
+    },
+    "detailSections": [
+      {
+        "title": "Build the estimate around how the job will run",
+        "paragraphs": [
+          "A contractor estimate needs to do more than produce a total. It should show what is included, where the work belongs and which assumptions the price depends on. Fuzed Flow organizes the quote into phases so the structure can follow the actual job sequence.",
+          "Inside each phase, add priced line items with scope descriptions, quantities, material and labour costs, client pricing and supporting photos. That gives the office a working cost record while the client receives a clearer explanation of the proposed work."
+        ],
+        "items": [
+          "Organize work into phases or rooms.",
+          "Record quantities, units, labour and material costs.",
+          "Add scope wording and photos beside the relevant line item.",
+          "Reorder phases as the estimate develops."
+        ]
+      },
+      {
+        "title": "Review the financial assumptions before the quote leaves the office",
+        "paragraphs": [
+          "The builder compares total cost with client revenue and displays the estimated margin amount and percentage. You can also account for discounts, tax settings, a required deposit and a milestone payment schedule before sending the document.",
+          "These figures help with estimating decisions, but they are based on the information entered by your company. They are not a guarantee of job profitability and do not replace bookkeeping or accounting review."
+        ]
+      },
+      {
+        "title": "Make upgrades and alternatives easier to decide",
+        "paragraphs": [
+          "Optional line items let a client compare an upgrade without mixing it into the base scope. For example, a standard fixture can remain in the main estimate while a premium fixture package is presented as an optional selection.",
+          "When the client reviews the shared quote, selected options update the approval total. The resulting choice stays connected to the quote activity instead of being buried in a separate email thread."
+        ]
+      },
+      {
+        "title": "Keep the approved scope connected to the next step",
+        "paragraphs": [
+          "After approval, the quote remains connected to the client and downstream project or invoice workflow. Selected material items can also be carried into project material tracking when they are marked for that purpose.",
+          "Reusable quote, phase and pricebook records help with repeat work, but every new estimate should still be checked against the current site conditions, supplier pricing and subcontractor scope."
+        ]
+      }
+    ],
     "howItWorks": [
       "Build the scope in phases and add priced line items.",
       "Review costs, gross margin, tax and optional upgrades.",
       "Share the quote; the client chooses options and approves the scope."
     ],
-    "example": "Offer a $1,200 fixture upgrade as an optional item. The client selection changes the approved quote total and is shown internally.",
+    "example": "For a bathroom renovation, create phases for demolition, plumbing, electrical, waterproofing, tile and finishing. Keep the standard fixture allowance in the base scope and offer a $1,200 premium fixture package as an option. The client can review the difference, choose the upgrade and approve the resulting quote total online.",
     "plan": "All plans",
+    "dateModified": "2026-10-21",
+    "faq": [
+      {
+        "question": "Can Fuzed Flow show estimated gross margin before I send a quote?",
+        "answer": "Yes. The quote builder compares entered costs with client revenue and displays an estimated margin amount and percentage. The result depends on the accuracy of the costs, quantities and pricing entered by your company."
+      },
+      {
+        "question": "Can clients select optional items on a contractor quote?",
+        "answer": "Yes. Optional items or phases can be presented in the shared quote. The client's selections change the approval total and remain connected to the quote record."
+      },
+      {
+        "question": "Can I reuse a previous estimate?",
+        "answer": "Use full quote templates, phase templates and reusable pricebook items to start familiar work faster. Review every copied scope, quantity and price before sending the new estimate."
+      },
+      {
+        "question": "Does estimating replace accounting software?",
+        "answer": "No. Fuzed Flow helps prepare and approve contractor scope and pricing. It does not replace formal bookkeeping, payroll, tax filing or an accountant's review."
+      }
+    ],
     "related": [
       "pricebook",
       "smart-templates",
@@ -287,14 +365,87 @@ export const features = [
     "name": "Expense tracking",
     "group": "Money & purchasing",
     "tagline": "Keep the receipt, category and job together.",
-    "overview": "Submit an expense with a receipt, choose its category and project, and send it for approval. Managers review submissions in HR. Project selection and receipt details are entered by the user.",
+    "seoTitle": "Contractor expense tracking and receipt approvals",
+    "description": "Let employees submit job expenses with a receipt, category, payment method and project for manager review and CSV reporting.",
+    "headline": "Capture contractor expenses while the receipt and job are still clear.",
+    "overview": "Employees can submit an expense with the date, amount, category, payment method, description and an optional project, then attach a receipt image or PDF. Managers review submissions in the HR workspace and can separate pending, approved and rejected claims. Project selection and receipt details are entered by the user.",
+    "benefitTitle": "Give field purchases a consistent path back to the office",
+    "benefits": [
+      {
+        "title": "Submit from the employee portal",
+        "text": "Record the amount, category, payment method and description while the purchase is still fresh, then upload or photograph the receipt."
+      },
+      {
+        "title": "Connect the expense to a job",
+        "text": "Choose an active project when the purchase belongs to specific work, or leave it as a general company expense when appropriate."
+      },
+      {
+        "title": "Create a manager review queue",
+        "text": "Review pending claims, approve or reject submissions and export the selected expense records for further office review."
+      }
+    ],
+    "detailSections": [
+      {
+        "title": "Record the details the office needs",
+        "paragraphs": [
+          "A receipt by itself rarely explains which job paid for the purchase or why it was needed. The employee expense form collects the purchase date, amount, category, payment method and a short description alongside the receipt document.",
+          "The receipt can be uploaded as an image or PDF. Employees can also use a supported mobile device to photograph the receipt before it is misplaced."
+        ],
+        "items": [
+          "Purchase date and amount.",
+          "Expense category and payment method.",
+          "Optional project assignment.",
+          "Description plus an image or PDF receipt."
+        ]
+      },
+      {
+        "title": "Separate job costs from general purchases",
+        "paragraphs": [
+          "Project selection is optional because not every expense belongs to one customer job. A box of fasteners purchased for a specific renovation can be connected to that project, while a general office purchase can remain unassigned.",
+          "The employee chooses the project and category, so managers should confirm both during review. Fuzed Flow does not infer the correct job from the receipt or automatically decide the accounting treatment."
+        ]
+      },
+      {
+        "title": "Review claims before they become an office mystery",
+        "paragraphs": [
+          "Expense submissions appear with other employee approvals in the HR workspace. Managers can filter the queue, inspect the supporting information and mark a claim approved or rejected.",
+          "Employees retain a focused view of their own expense claims and status. This creates a traceable review step without exposing the full company workspace to every field user."
+        ]
+      },
+      {
+        "title": "Use the expense record in reporting",
+        "paragraphs": [
+          "Approved and recorded expenses can be reviewed by date and category in reporting, and selected records can be exported to CSV. That helps prepare information for bookkeeping without presenting Fuzed Flow as the accounting system of record.",
+          "The current expense form does not separately capture recoverable sales tax. Tax credits, reimbursements and final ledger classification should be confirmed in your accounting process."
+        ]
+      }
+    ],
     "howItWorks": [
       "Enter the amount and category.",
       "Choose the relevant project and attach the receipt.",
       "Submit the expense for a manager to review."
     ],
-    "example": "Attach a receipt for site supplies and select the renovation project so the office can review the purchase in context.",
+    "example": "A crew member buys $86.40 of site protection materials. From the employee portal, they photograph the receipt, choose the supplies category, select the renovation project and add a short description. The office can then review the claim with the job context instead of trying to identify the purchase at month-end.",
     "plan": "Employee expense submissions: Professional & Business.",
+    "dateModified": "2026-10-21",
+    "faq": [
+      {
+        "question": "Can an employee photograph a receipt from a phone?",
+        "answer": "Yes. The employee portal accepts receipt images and PDF documents. On a supported mobile device, the employee can take or upload a receipt photo when submitting the claim."
+      },
+      {
+        "question": "Does every expense need to be connected to a project?",
+        "answer": "No. Project assignment is optional. Connect job-specific purchases to the relevant project and leave general company expenses unassigned when appropriate."
+      },
+      {
+        "question": "Can managers approve or reject expense claims?",
+        "answer": "Yes. Managers can review employee expense submissions in the HR workspace and mark them approved or rejected."
+      },
+      {
+        "question": "Does Fuzed Flow replace bookkeeping software?",
+        "answer": "No. Expense tracking organizes submissions, receipts, approvals and CSV exports. Your bookkeeping process remains responsible for ledger coding, tax treatment, reimbursements and formal financial records."
+      }
+    ],
     "related": [
       "employee-portal",
       "hr-management",
@@ -306,14 +457,94 @@ export const features = [
     "name": "Reports",
     "group": "Money & purchasing",
     "tagline": "Review collected payments, expenses and outstanding invoices.",
-    "overview": "View sales and revenue, expense categories, invoice tax amounts and invoice aging with date filters and CSV exports. Invoiced tax is an overview; expense tax credits and filing adjustments are not tracked here.",
+    "seoTitle": "Contractor reporting for revenue, expenses and invoices",
+    "description": "Review contractor revenue, invoiced totals, expenses, tax summaries and unpaid invoice aging with date filters and CSV exports.",
+    "headline": "See what was invoiced, collected, spent and still outstanding.",
+    "overview": "Review sales and revenue, expense categories, invoice tax amounts and invoice aging with year-to-date, quarter-to-date and monthly filters. Export the underlying records to CSV for further review. Invoiced tax is an overview; expense tax credits and filing adjustments are not tracked here.",
+    "benefitTitle": "Answer practical financial questions without rebuilding the report",
+    "benefits": [
+      {
+        "title": "Compare billed and collected revenue",
+        "text": "Review total invoiced, confirmed payments, outstanding accounts receivable, a six-month trend and the highest-value clients for the selected period."
+      },
+      {
+        "title": "Understand recorded expenses",
+        "text": "See the expense total, category breakdown and transaction log using the job and category information recorded by your team."
+      },
+      {
+        "title": "Focus on overdue invoices",
+        "text": "Group unpaid balances into current, 1–30, 31–60 and 60-plus-day aging buckets, then export the open invoice details."
+      }
+    ],
+    "detailSections": [
+      {
+        "title": "Sales and revenue: billed work is not the same as collected cash",
+        "paragraphs": [
+          "The Sales & Revenue view separates the total issued on non-draft invoices from payments that have actually been recorded. It also shows outstanding accounts receivable, a six-month comparison of billed and collected amounts and the top clients by invoiced value.",
+          "Use year-to-date, quarter-to-date, this-month or last-month filters to answer a defined question. Revenue figures depend on confirmed payment records, while billed totals depend on the invoice issue date and status."
+        ],
+        "items": [
+          "Revenue collected from recorded payments.",
+          "Total issued on non-draft invoices.",
+          "Outstanding accounts receivable.",
+          "Six-month billed-versus-collected trend and top clients."
+        ]
+      },
+      {
+        "title": "Expense reporting: review where recorded spending went",
+        "paragraphs": [
+          "The Expense Report totals expenses in the selected period, groups them by category and provides a transaction log with the merchant or description, category, project and amount.",
+          "The report is only as complete as the expense records submitted by the team. Use the connected expense-approval workflow to keep receipts and project context attached before month-end review."
+        ]
+      },
+      {
+        "title": "Invoice aging: prioritize the balances that need attention",
+        "paragraphs": [
+          "The aging view uses invoice due dates and recorded balances to group open invoices into current, 1–30 days past due, 31–60 days past due and more than 60 days past due.",
+          "The detailed table keeps the invoice, client, due date, total and remaining balance together. Export the aging records to CSV when the office needs a follow-up list or a separate working file."
+        ]
+      },
+      {
+        "title": "Tax summary: a focused invoice overview, not a tax return",
+        "paragraphs": [
+          "The Tax Summary shows tax recorded on issued invoices and identifies the invoices contributing to the total. The current expense workflow does not separately record recoverable expense tax.",
+          "Because expense tax credits, filing adjustments and accounting entries are outside this report, use it as an operational reference and confirm official tax reporting with your accounting records and professional adviser."
+        ]
+      },
+      {
+        "title": "Export the records behind the summary",
+        "paragraphs": [
+          "Sales, expense, tax and aging views provide CSV exports with fields relevant to the selected report. Exported records can be reviewed in a spreadsheet or provided to the person responsible for bookkeeping.",
+          "Exports reflect the data currently recorded in Fuzed Flow. They do not create adjusting entries, reconcile a bank account or replace formal financial statements."
+        ]
+      }
+    ],
     "howItWorks": [
       "Choose a report and date range.",
       "Review recorded payments, expenses or unpaid balances.",
       "Export the selected records as CSV for further review."
     ],
-    "example": "Compare the month’s invoiced total with confirmed payments, then review which unpaid balances are more than 30 days overdue.",
+    "example": "At month-end, select This Month to compare issued invoices with confirmed payments and recorded expenses. Then open Invoice Aging to identify balances that are 1–30, 31–60 or more than 60 days past due, and export the list for follow-up.",
     "plan": "Professional & Business",
+    "dateModified": "2026-10-21",
+    "faq": [
+      {
+        "question": "What contractor reports are available?",
+        "answer": "The reporting workspace includes Sales & Revenue, Expense Report, Tax Summary and Invoice Aging views, with date filters and CSV exports where applicable."
+      },
+      {
+        "question": "What is the difference between invoiced revenue and collected revenue?",
+        "answer": "Invoiced totals come from issued invoices in the selected period. Collected revenue comes from confirmed payment records. Keeping them separate helps show what was billed versus what was actually received."
+      },
+      {
+        "question": "How are overdue invoices grouped?",
+        "answer": "Open invoice balances are grouped as current, 1–30 days past due, 31–60 days past due and more than 60 days past due using each invoice's due date."
+      },
+      {
+        "question": "Is the tax summary suitable for filing a tax return?",
+        "answer": "No. The summary shows tax recorded on issued invoices. It does not currently include recoverable expense tax, filing adjustments or formal accounting entries."
+      }
+    ],
     "related": [
       "invoicing",
       "expense-tracking"

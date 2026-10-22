@@ -7,6 +7,10 @@ import {industries} from './src/data/industries.js';
 export const routes=['/','/features','/pricing','/integrations','/resources','/workflow-example','/about','/security','/compare/spreadsheets','/faq','/contact','/terms','/privacy',...features.map(f=>'/features/'+f.slug),...resources.map(r=>'/resources/'+r.slug),...industries.map(i=>'/industries/'+i.slug)];
 const site='https://www.fuzedflow.com';
 const lastModified='2026-10-15';
+const routeLastModified=route=>{
+ const feature=features.find(item=>route==='/features/'+item.slug);
+ return feature?.dateModified||lastModified;
+};
 const template=fs.readFileSync('dist/index.html','utf8').replace(/<title>.*?<\/title>/s,'');
 let server;
 try{
@@ -20,7 +24,7 @@ try{
   const destination=route==='/404'?'dist/404.html':path.join('dist',route,'index.html');
   fs.mkdirSync(path.dirname(destination),{recursive:true});fs.writeFileSync(destination,result);console.log('Prerendered '+route);
  }
- fs.writeFileSync('dist/sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+routes.map(route=>`  <url><loc>${site}${route}</loc><lastmod>${lastModified}</lastmod></url>`).join('\n')+'\n</urlset>\n');
+ fs.writeFileSync('dist/sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+routes.map(route=>`  <url><loc>${site}${route}</loc><lastmod>${routeLastModified(route)}</lastmod></url>`).join('\n')+'\n</urlset>\n');
  fs.writeFileSync('dist/robots.txt',`User-agent: *\nAllow: /\nSitemap: ${site}/sitemap.xml\n`);
  console.log(`Verified ${routes.length} indexable pages and a noindex 404.`);
 }catch(error){console.error(error);process.exitCode=1;}finally{if(server)await server.close();}

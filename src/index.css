@@ -173,7 +173,68 @@
   list-style: decimal;
 }
 
+.ff-feature-figure {
+  max-width: 980px;
+  margin: 12px auto 28px;
+  border: 1px solid #d4d7db;
+  background: #f3f4f5;
+  box-shadow: 10px 10px 0 #ffbf00;
+}
+
+.ff-feature-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ff-feature-figure figcaption {
+  padding: 18px 20px;
+  color: #505763;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.ff-feature-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.ff-feature-detail {
+  padding: 30px;
+  border: 1px solid #d4d7db;
+  border-top: 4px solid #ffbf00;
+  background: #fff;
+}
+
+.ff-feature-detail h3 {
+  margin-bottom: 16px;
+}
+
+.ff-feature-detail p {
+  color: #505763;
+  line-height: 1.85;
+  margin-top: 14px;
+}
+
+.ff-feature-detail .ff-check-list {
+  margin-bottom: 0;
+}
+
 @media (max-width: 767px) {
+  .ff-feature-details {
+    grid-template-columns: 1fr;
+  }
+
+  .ff-feature-detail {
+    padding: 24px 20px;
+  }
+
+  .ff-feature-figure {
+    box-shadow: 6px 6px 0 #ffbf00;
+  }
+
   .ff-integrations .ff-intro {
     padding-bottom: 28px;
   }
