@@ -23,6 +23,7 @@ export default function WorkflowExample() {
         <Link className="inline-block mt-4 font-bold" to={'/features/' + slug}>See this workflow →</Link>
       </section>)}
       <p className="ff-plan-note">Client updates and closeouts are shared project tools. AI Rewrite and change orders are included on Professional and Business. AI Rewrite usage limits apply.</p>
+      <p className="ff-blog-related-note"><Link to="/blog/what-makes-fuzedflow-different">Why these handoffs matter: what makes FuzedFlow different →</Link></p>
       <div className="ff-cta-strip"><h2>Try the steps with your own scope.</h2><TrialCTA /></div>
     </article>
   </Page>;

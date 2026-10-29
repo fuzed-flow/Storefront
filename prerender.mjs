@@ -4,10 +4,14 @@ import {createServer} from 'vite';
 import {features} from './src/data/features.js';
 import {resources} from './src/data/resources.js';
 import {industries} from './src/data/industries.js';
-export const routes=['/','/features','/pricing','/integrations','/resources','/workflow-example','/about','/security','/compare/spreadsheets','/faq','/contact','/referrals','/terms','/privacy',...features.map(f=>'/features/'+f.slug),...resources.map(r=>'/resources/'+r.slug),...industries.map(i=>'/industries/'+i.slug)];
+import {blogPosts,blogPath} from './src/data/blog.js';
+export const routes=['/','/features','/pricing','/integrations','/resources','/workflow-example','/about','/security','/compare/spreadsheets','/faq','/contact','/blog',...blogPosts.map(blogPath),'/referrals','/terms','/privacy',...features.map(f=>'/features/'+f.slug),...resources.map(r=>'/resources/'+r.slug),...industries.map(i=>'/industries/'+i.slug)];
 const site='https://www.fuzedflow.com';
 const lastModified='2026-10-15';
 const routeLastModified=route=>{
+ if(route==='/blog')return blogPosts.reduce((latest,post)=>post.dateModified>latest?post.dateModified:latest,'2026-10-29');
+ const post=blogPosts.find(post=>blogPath(post)===route);
+ if(post)return post.dateModified;
  if(route==='/referrals')return '2026-10-29';
  const feature=features.find(item=>route==='/features/'+item.slug);
  return feature?.dateModified||lastModified;

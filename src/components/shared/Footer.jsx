@@ -25,7 +25,7 @@ export default function Footer() {
           </a>)}
         </nav>
       </div>
-      <div><h2>Explore</h2>{[['Features', '/features'], ['Pricing', '/pricing'], ['Integrations & migration', '/integrations'], ['Resources', '/resources'], ['Fuzed Flow vs spreadsheets', '/compare/spreadsheets'], ['Product questions', '/faq']].map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div>
+      <div><h2>Explore</h2>{[['Features', '/features'], ['Pricing', '/pricing'], ['Integrations & migration', '/integrations'], ['Resources', '/resources'], ['Blog', '/blog'], ['Fuzed Flow vs spreadsheets', '/compare/spreadsheets'], ['Product questions', '/faq']].map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div>
       <div><h2>Your work</h2>{[['Renovation contractors', 'renovation-contractors'], ['Remodeling contractors', 'remodeling-contractors'], ['General contractors', 'general-contractors'], ['Home builders', 'home-builders']].map(([label, href]) => <a key={href} href={`/industries/${href}`}>{label}</a>)}<a href="/features/client-updates">Client project updates</a><a href="/features/project-closeouts">Project closeouts</a><a href="/workflow-example">See a worked job example</a></div>
       <div><h2>Get in touch</h2><PhoneLink /><a href="/contact#demo">Book a demo</a><a href="/contact">Contact</a><a href="/about">About Fuzed Flow</a><a href="/referrals">Referral programs</a><a href="/security">Trust & security</a><a href="/terms">Terms & conditions</a><a href="/privacy">Privacy policy</a></div>
     </div>
