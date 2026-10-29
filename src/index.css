@@ -251,3 +251,34 @@
 
 /* Footer social links remain easy to tap on phones and visibly focusable. */
 .ff-social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.ff-footer .ff-social-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0;border:1px solid #5a5d63;color:#fff;transition:background .15s,border-color .15s,color .15s}.ff-footer .ff-social-link:hover{background:#ffbf00;border-color:#ffbf00;color:#111}
+
+/* Referral program page. */
+.ff-referral-hero{padding-block:72px 64px;background:radial-gradient(ellipse at 90% 30%,#3b3016 0,transparent 52%),#0b0d10;border-bottom:5px solid #ffbf00}
+.ff-referral-hero h1{max-width:920px}
+.ff-referral-hero h1 span{color:#ffbf00}
+.ff-referral-hero .ff-lead{max-width:740px}
+.ff-referral-hero-note{margin-top:28px;color:#ffda6c;font-size:14px;font-weight:700}
+.ff-referral-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.ff-referral-card{display:flex;flex-direction:column;min-width:0;border:1px solid #d4d7db;background:#fff}
+.ff-referral-card>img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#0b0d10}
+.ff-referral-card-body{padding:32px;display:flex;flex:1;flex-direction:column;align-items:flex-start}
+.ff-referral-card .ff-eyebrow{font-size:11px;line-height:1.7;margin-bottom:12px}
+.ff-section .ff-referral-card h2{font-family:var(--font-body);font-size:clamp(25px,2.6vw,32px);font-weight:850;line-height:1.2;margin-bottom:16px}
+.ff-referral-card h2 span{display:block}
+.ff-referral-description{line-height:1.8;color:#505763}
+.ff-referral-reward{display:flex;gap:18px;align-items:center;margin:26px 0 18px;color:#111}
+.ff-referral-reward>strong{font-size:64px;line-height:1;font-weight:900;letter-spacing:-.05em}
+.ff-referral-reward>span{font-size:18px;font-weight:800;line-height:1.4;text-transform:capitalize}
+.ff-referral-reward small{display:block;font-size:12px;font-weight:500;text-transform:none;color:#505763;margin-top:6px}
+.ff-referral-discount{width:100%;background:#fffaec;border-left:3px solid #ffbf00;padding:16px;line-height:1.7;font-size:15px}
+.ff-referral-card .ff-check-list{font-size:15px;margin-block:20px}
+.ff-referral-fit{border-top:1px solid #e2e4e7;padding-top:20px;line-height:1.8;color:#505763;font-size:14px;margin-bottom:28px}
+.ff-referral-fit strong{display:block;color:#111;margin-bottom:6px}
+.ff-referral-card .ff-button{margin-top:auto;width:100%}
+.ff-referral-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ff-referral-note{font-size:14px;line-height:1.8;color:#505763;max-width:780px}
+.ff-referral-contact{display:flex;justify-content:space-between;align-items:center;gap:32px}
+.ff-referral-contact p:not(.ff-eyebrow){color:#505763;line-height:1.8}
+.ff-referral-contact-actions{display:grid;gap:18px;flex-shrink:0;text-align:center}
+.ff-referral-phone{font-size:16px;font-weight:750;text-decoration:underline;text-underline-offset:5px;min-height:44px;display:flex;align-items:center;justify-content:center}
+@media(max-width:760px){.ff-referral-grid{grid-template-columns:1fr;gap:32px}.ff-referral-card-body{padding:24px}.ff-referral-steps{grid-template-columns:1fr;gap:0}.ff-referral-steps li{padding-block:22px}.ff-referral-contact{align-items:stretch;flex-direction:column}.ff-referral-hero{padding-block:48px}.ff-referral-reward>strong{font-size:56px}}
