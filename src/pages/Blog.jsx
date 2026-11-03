@@ -28,9 +28,9 @@ export default function Blog() {
       <p className="ff-lead">Clearer quotes. Better conversations. A more organized job.<br/>Practical guides for contractors who do the work.</p>
     </div></section>
     <div className="ff-shell ff-section">
-      <p className="ff-eyebrow">Latest article</p>
-      {blogPosts.map(post => <article className="ff-blog-feature" key={post.slug}>
-        <Link to={blogPath(post)} aria-label={`Read ${post.title}`} className="ff-blog-feature-image"><BlogImage post={post} eager sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1240px) 55vw, 660px"/></Link>
+      <p className="ff-eyebrow">Latest articles</p>
+      {blogPosts.map((post, index) => <article className="ff-blog-feature" key={post.slug}>
+        <Link to={blogPath(post)} aria-label={`Read ${post.title}`} className="ff-blog-feature-image"><BlogImage post={post} eager={index === 0} sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1240px) 55vw, 660px"/></Link>
         <div className="ff-blog-feature-copy">
           <p className="ff-eyebrow">{post.category}</p>
           <h2><Link to={blogPath(post)}>{post.title}</Link></h2>

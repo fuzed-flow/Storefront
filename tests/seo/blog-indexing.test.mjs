@@ -17,7 +17,8 @@ test('blog articles expose complete content, canonical URLs and article metadata
     assert.ok(html.includes('content="index,follow,max-image-preview:large"'));
     assert.ok(html.includes('property="og:type" content="article"'));
     assert.ok(html.includes(`property="og:image" content="https://www.fuzedflow.com${post.hero}"`));
-    assert.ok(html.includes('A better way to evaluate contractor software'));
+    const expectedSection = post.slug === 'from-lead-to-project-closeout' ? 'Get paid and close out the balance' : 'A better way to evaluate contractor software';
+    assert.ok(html.includes(expectedSection));
     assert.ok(html.includes('name="email"') && html.includes('Ask the FuzedFlow team'));
     assert.ok(!html.includes('Loading Fuzed Flow'));
     const graphs = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].flatMap(match => JSON.parse(match[1])['@graph']);

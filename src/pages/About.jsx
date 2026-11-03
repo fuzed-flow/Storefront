@@ -48,6 +48,7 @@ export default function About() {
         <h2>Practical contractor workflows come first.</h2>
         <p>Fuzed Flow focuses on the work contractors repeat every week: qualifying an enquiry, agreeing on scope, coordinating a job, keeping the client informed, collecting payment and closing out deficiencies. It is not presented as payroll, accounting, legal advice or a municipal permit service.</p>
         <p className="mt-4"><Link to="/blog/what-makes-fuzedflow-different">Read what makes FuzedFlow different →</Link></p>
+        <p className="mt-4"><Link to="/blog/from-lead-to-project-closeout">Follow a job from first enquiry to final payment →</Link></p>
         <p className="mt-4"><Link to="/workflow-example">Follow a worked renovation example →</Link></p>
       </section>
 

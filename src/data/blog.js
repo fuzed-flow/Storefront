@@ -1,5 +1,19 @@
 export const blogPosts = [
   {
+    "slug": "from-lead-to-project-closeout",
+    "title": "From First Enquiry to Final Walkthrough: A Contractor’s Guide to FuzedFlow",
+    "seoTitle": "From Lead to Project Closeout with FuzedFlow",
+    "description": "Follow a bathroom renovation in FuzedFlow from lead capture and quote approval to client updates, deficiency photos, trade assignments, and final payment.",
+    "excerpt": "Follow one bathroom renovation from capturing a lead on your phone to checking the last touch-ups and getting paid.",
+    "category": "Contractor workflows",
+    "datePublished": "2026-11-03",
+    "dateModified": "2026-11-03",
+    "author": "FuzedFlow",
+    "hero": "/images/blog/from-lead-to-project-closeout-1440.webp",
+    "heroBase": "/images/blog/from-lead-to-project-closeout",
+    "heroAlt": "A renovation contractor taps New Lead in FuzedFlow on a phone during a site visit."
+  },
+  {
     slug: 'what-makes-fuzedflow-different',
     title: 'What makes FuzedFlow different?',
     seoTitle: 'What Makes FuzedFlow Different for Contractors?',

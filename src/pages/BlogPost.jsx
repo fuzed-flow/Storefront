@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import LeadToCloseoutArticle, { closeoutSections } from './LeadToCloseoutArticle';
 import Page from '@/components/shared/Page';
 import BlogImage from '@/components/shared/BlogImage';
 import DemoForm from '@/components/forms/DemoForm';
@@ -114,6 +115,11 @@ export default function BlogPost() {
   const { slug } = useParams();
   const post = blogPosts.find(item => item.slug === slug);
   if (!post) return <PageNotFound/>;
+  const isCloseoutGuide = post.slug === 'from-lead-to-project-closeout';
+  const articleSections = isCloseoutGuide ? closeoutSections : sections;
+  const heroCaption = isCloseoutGuide
+    ? 'A renovation contractor starts a new lead in FuzedFlow during a site visit. Illustrative image.'
+    : 'A clearer conversation starts with a shared understanding of the work. Illustrative image.';
   const path = blogPath(post);
   const author = { '@type': 'Organization', '@id': `${site}/#organization`, name: post.author, url: `${site}/about` };
   const schema = [
@@ -122,7 +128,7 @@ export default function BlogPost() {
       url: site + path, mainEntityOfPage: { '@type': 'WebPage', '@id': site + path },
       datePublished: post.datePublished, dateModified: post.dateModified,
       author, publisher: { ...author, url: site, logo: { '@type': 'ImageObject', url: 'https://ochqexofahdssmarnict.supabase.co/storage/v1/object/public/logos/fuzed-flow-logo.png' } },
-      image: { '@type': 'ImageObject', url: site + post.hero, width: 1440, height: 810, caption: 'Illustrative renovation planning scene.' },
+      image: { '@type': 'ImageObject', url: site + post.hero, width: 1440, height: 810, caption: heroCaption },
       articleSection: post.category, inLanguage: 'en-CA', isPartOf: { '@type': 'Blog', '@id': `${site}/blog#blog`, url: `${site}/blog`, name: 'The FuzedFlow blog' },
     },
   ];
@@ -132,22 +138,30 @@ export default function BlogPost() {
       <header className="ff-blog-heading ff-blog-article-heading"><div className="ff-shell">
         <nav className="ff-blog-breadcrumbs" aria-label="Breadcrumb"><ol><li><Link to="/">Home</Link></li><li><Link to="/blog">Blog</Link></li><li aria-current="page">{post.title}</li></ol></nav>
         <p className="ff-eyebrow">{post.category}</p><h1>{post.title}</h1>
-        <p className="ff-lead">The useful difference is in the handoffs: from a clear quote to an informed client and a documented final walkthrough.</p>
+        <p className="ff-lead">{isCloseoutGuide ? 'A homeowner calls about a bathroom renovation. Follow that enquiry from the first site visit to the final walkthrough and payment.' : 'The useful difference is in the handoffs: from a clear quote to an informed client and a documented final walkthrough.'}</p>
         <p className="ff-blog-meta">By <Link to="/about" rel="author">{post.author}</Link> · <time dateTime={post.datePublished}>{formatBlogDate(post.datePublished)}</time></p>
       </div></header>
-      <figure className="ff-shell ff-blog-hero-image"><BlogImage post={post} eager/><figcaption>A clearer conversation starts with a shared understanding of the work. Illustrative image.</figcaption></figure>
+      <figure className="ff-shell ff-blog-hero-image"><BlogImage post={post} eager/><figcaption>{heroCaption}</figcaption></figure>
       <div className="ff-shell ff-blog-reading-layout">
-        <aside className="ff-blog-toc"><nav aria-label="In this article"><h2>In this article</h2><ol>{sections.map(([id, title]) => <li key={id}><a href={`#${id}`}>{title}</a></li>)}</ol></nav></aside>
+        <aside className="ff-blog-toc"><nav aria-label="In this article"><h2>In this article</h2><ol>{articleSections.map(([id, title]) => <li key={id}><a href={`#${id}`}>{title}</a></li>)}</ol></nav></aside>
         <div className="ff-blog-prose">
+          {isCloseoutGuide ? <>
+            <div className="ff-blog-answer">
+              <h2>How does a job move through FuzedFlow?</h2>
+              <p>Capture the lead, turn the agreed scope into a project, and share progress with the client. Use the Project Deficiency Tool to give each outstanding item a photo, a person responsible, and a status. Verify the final touch-ups, collect the remaining balance, and send a receipt.</p>
+            </div>
+            <LeadToCloseoutArticle/>
+          </> : <>
           <div className="ff-blog-answer"><h2>What makes FuzedFlow different?</h2><p>FuzedFlow connects the records contractors use to win and finish work: phased quotes with client options, reviewed project updates, approval records and photo-based deficiency checklists. Its emphasis is the path from agreed scope to a clear handover, with plan-specific tools for the office and crew.</p></div>
           <ArticleContent/>
-          <section className="ff-blog-author" aria-label="About the author"><h2>About this guide</h2><p>Written by <Link to="/about">FuzedFlow</Link> from our product workflow guides and current plan descriptions. This is our own product perspective. The renovation example is illustrative; the estimate-builder image is a product screenshot.</p><p>Product details can change. See the linked feature guides, <Link to="/pricing">pricing</Link> and <Link to="/integrations">integration status</Link> for the current details.</p></section>
+          </>}
+          <section className="ff-blog-author" aria-label="About the author"><h2>About this guide</h2><p>Written by <Link to="/about">FuzedFlow</Link> from our product workflow guides and current plan descriptions. This is our own product perspective. {isCloseoutGuide ? 'The bathroom renovation and hero image are illustrative.' : 'The renovation example is illustrative; the estimate-builder image is a product screenshot.'}</p><p>Product details can change. See the linked feature guides, <Link to="/pricing">pricing</Link> and <Link to="/integrations">integration status</Link> for the current details.</p></section>
         </div>
       </div>
     </article>
     <section id="ask-about-fuzedflow" className="ff-band ff-blog-enquiry"><div className="ff-shell ff-section ff-blog-enquiry-grid">
       <div><p className="ff-eyebrow">Bring your next job</p><h2>See how your workflow fits.</h2><p>Tell us how you quote, update clients and close out work. We’ll help you explore the relevant parts of FuzedFlow.</p><p>Call <PhoneLink className="font-bold underline underline-offset-4"/> or send your question.</p><Link to="/pricing" className="ff-button">Compare plans & start a trial <span aria-hidden="true">→</span></Link></div>
-      <div><h3>Ask the FuzedFlow team</h3><DemoForm kind="contact" initialMessage="I read ‘What makes FuzedFlow different?’ and would like to discuss how it fits my business."/></div>
+      <div><h3>Ask the FuzedFlow team</h3><DemoForm kind="contact" initialMessage={`I read ‘${post.title}’ and would like to discuss how it fits my business.`}/></div>
     </div></section>
   </Page>;
 }
