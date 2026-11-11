@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    "slug": "choosing-contractor-software-5-questions",
+    "title": "Choosing Contractor Software? Ask These 5 Questions Before Signing Up",
+    "seoTitle": "Choosing Contractor Software? 5 Questions to Ask",
+    "description": "Compare contractor software costs, support, data exports, quoting, progress billing and mobile usability with five practical questions before signing up.",
+    "excerpt": "A low monthly price only matters if the software works for your business. Test costs, support, access to records, quoting and jobsite usability before committing.",
+    "category": "Choosing contractor software",
+    "datePublished": "2026-11-10",
+    "dateModified": "2026-11-10",
+    "author": "FuzedFlow",
+    "hero": "/images/blog/choosing-contractor-software-5-questions-1440.webp",
+    "heroBase": "/images/blog/choosing-contractor-software-5-questions",
+    "heroAlt": "A renovation contractor considers software on a laptop and phone beside a five-item checklist at a kitchen jobsite.",
+    "heroCaption": "A contractor evaluates software against the needs of a real job. AI-generated illustrative image.",
+    "lead": "Before you commit, check the total cost, available support, access to your records and how the software handles a real job."
+  },
+  {
     "slug": "from-lead-to-project-closeout",
     "title": "From First Enquiry to Final Walkthrough: A Contractor’s Guide to FuzedFlow",
     "seoTitle": "From Lead to Project Closeout with FuzedFlow",
