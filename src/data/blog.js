@@ -1,5 +1,22 @@
 export const blogPosts = [
   {
+    "slug": "what-makes-a-contractor-quote-stand-out",
+    "title": "What Makes a Contractor Quote Stand Out? More Than Just the Price",
+    "seoTitle": "What Makes a Contractor Quote Stand Out?",
+    "description": "Create professional contractor quotes with your logo, colours, hero image, clear room-by-room scope, optional upgrades, product details and supporting documents.",
+    "excerpt": "Make your quote a better introduction to your business with personal branding, clear scope, client options and supporting documents. Included on every FuzedFlow plan.",
+    "category": "Quoting & proposals",
+    "datePublished": "2026-11-12",
+    "dateModified": "2026-11-12",
+    "author": "FuzedFlow",
+    "hero": "/images/blog/what-makes-a-contractor-quote-stand-out-1440.webp",
+    "heroBase": "/images/blog/what-makes-a-contractor-quote-stand-out",
+    "heroAlt": "FuzedFlow’s quote builder displayed on a laptop beside plans and a tape measure.",
+    "heroCaption": "FuzedFlow’s quote builder in a jobsite setting. Illustrative scene created using the supplied product screenshot.",
+    "lead": "Give clients a clear scope, relevant project photos and a professional proposal that feels like your business. These quoting tools are included on every plan.",
+    "guideNote": "This guide describes FuzedFlow’s quoting workflows and plan availability. The examples and hero scene are illustrative; the in-article quote-builder image is the supplied product screenshot."
+  },
+  {
     "slug": "choosing-contractor-software-5-questions",
     "title": "Choosing Contractor Software? Ask These 5 Questions Before Signing Up",
     "seoTitle": "Choosing Contractor Software? 5 Questions to Ask",

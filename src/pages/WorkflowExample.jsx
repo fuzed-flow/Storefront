@@ -26,6 +26,7 @@ export default function WorkflowExample() {
       <p className="ff-blog-related-note"><Link to="/blog/what-makes-fuzedflow-different">Why these handoffs matter: what makes FuzedFlow different →</Link></p>
       <p className="ff-blog-related-note"><Link to="/blog/from-lead-to-project-closeout">Read the full lead-to-closeout guide →</Link></p>
       <p className="ff-blog-related-note"><Link to="/blog/choosing-contractor-software-5-questions">Evaluate software against your own workflow: five questions to ask →</Link></p>
+      <p className="ff-blog-related-note"><Link to="/blog/what-makes-a-contractor-quote-stand-out">Build a clearer, more personal proposal: what makes a quote stand out →</Link></p>
       <div className="ff-cta-strip"><h2>Try the steps with your own scope.</h2><TrialCTA /></div>
     </article>
   </Page>;

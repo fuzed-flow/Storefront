@@ -50,6 +50,7 @@ export default function About() {
         <p className="mt-4"><Link to="/blog/what-makes-fuzedflow-different">Read what makes FuzedFlow different →</Link></p>
         <p className="mt-4"><Link to="/blog/from-lead-to-project-closeout">Follow a job from first enquiry to final payment →</Link></p>
         <p className="mt-4"><Link to="/blog/choosing-contractor-software-5-questions">Choosing contractor software? Start with these five questions →</Link></p>
+        <p className="mt-4"><Link to="/blog/what-makes-a-contractor-quote-stand-out">See what makes a contractor quote stand out →</Link></p>
         <p className="mt-4"><Link to="/workflow-example">Follow a worked renovation example →</Link></p>
       </section>
 

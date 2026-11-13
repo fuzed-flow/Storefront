@@ -17,7 +17,12 @@ test('blog articles expose complete content, canonical URLs and article metadata
     assert.ok(html.includes('content="index,follow,max-image-preview:large"'));
     assert.ok(html.includes('property="og:type" content="article"'));
     assert.ok(html.includes(`property="og:image" content="https://www.fuzedflow.com${post.hero}"`));
-    const expectedSection = post.slug === 'choosing-contractor-software-5-questions' ? 'Can I access and export my business records?' : post.slug === 'from-lead-to-project-closeout' ? 'Get paid and close out the balance' : 'A better way to evaluate contractor software';
+    const expectedSection = {
+      'what-makes-a-contractor-quote-stand-out': 'Build trust with photos and supporting documents',
+      'choosing-contractor-software-5-questions': 'Can I access and export my business records?',
+      'from-lead-to-project-closeout': 'Get paid and close out the balance',
+      'what-makes-fuzedflow-different': 'A better way to evaluate contractor software',
+    }[post.slug];
     assert.ok(html.includes(expectedSection));
     assert.ok(html.includes('name="email"') && html.includes('Ask the FuzedFlow team'));
     assert.ok(!html.includes('Loading Fuzed Flow'));

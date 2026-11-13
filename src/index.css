@@ -309,6 +309,7 @@
 .ff-blog-breadcrumbs a{text-decoration:underline;text-underline-offset:4px}
 .ff-blog-hero-image{margin-top:32px}
 .ff-blog-hero-image img{display:block;width:100%;height:auto;max-height:540px;object-fit:cover;object-position:center 45%;background:#e8e6e1}
+.ff-blog-hero-full img{max-height:none}
 .ff-blog-hero-image figcaption,.ff-blog-product-image figcaption{font-size:13px;line-height:1.8;color:#505763;padding:14px 0}
 .ff-blog-reading-layout{display:grid;grid-template-columns:220px minmax(0,800px);gap:70px;justify-content:space-between;align-items:start;padding-block:40px 70px}
 .ff-blog-toc{position:sticky;top:120px;border-top:3px solid #ffbf00;padding-top:20px}
