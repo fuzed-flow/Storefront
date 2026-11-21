@@ -1,5 +1,22 @@
 export const blogPosts = [
   {
+    "slug": "construction-change-order-example",
+    "title": "Construction Change Order Example: Keep Extra Work Connected to the Job",
+    "seoTitle": "Construction Change Order Example & Template",
+    "description": "Learn what a construction change order should include, with a worked pot-light example, a reusable template and a workflow from client approval to invoicing.",
+    "excerpt": "Keep extra work linked to the right client and project. Use a practical change-order checklist, a worked example and a reusable template.",
+    "category": "Change orders & approvals",
+    "datePublished": "2026-11-20",
+    "dateModified": "2026-11-20",
+    "author": "FuzedFlow",
+    "hero": "/images/blog/construction-change-order-example-1440.webp",
+    "heroBase": "/images/blog/construction-change-order-example",
+    "heroAlt": "FuzedFlow’s Change Order Builder on a laptop beside a lighting plan at a renovation jobsite.",
+    "heroCaption": "Illustrative jobsite scene incorporating a FuzedFlow Change Order Builder screenshot.",
+    "lead": "Record the scope, price, schedule impact and client approval for extra work, while keeping every change connected to the job.",
+    "guideNote": "This guide draws on our team’s workflow research, product information and a fictional renovation example. Prices are illustrative CAD amounts, not a recommended rate. The builder screenshot is from a demonstration account; the hero scene is illustrative."
+  },
+  {
     "slug": "what-makes-a-contractor-quote-stand-out",
     "title": "What Makes a Contractor Quote Stand Out? More Than Just the Price",
     "seoTitle": "What Makes a Contractor Quote Stand Out?",

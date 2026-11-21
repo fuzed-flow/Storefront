@@ -322,6 +322,13 @@
 .ff-blog-prose h2{font-family:var(--font-heading);font-size:clamp(26px,2.7vw,34px);line-height:1.25;letter-spacing:-.025em;color:#111;margin-bottom:22px}
 .ff-blog-prose h3{font-size:21px;font-weight:800;line-height:1.45;color:#111;margin:28px 0 14px}
 .ff-blog-prose p{margin-bottom:20px}
+.ff-blog-table-wrap{max-width:100%;overflow-x:auto;margin:26px 0 30px;border:1px solid #d4d7db}
+.ff-blog-table{width:100%;min-width:460px;border-collapse:collapse;font-size:16px;line-height:1.7}
+.ff-blog-table caption{text-align:left;padding:14px 18px;background:#fffaec;color:#111;font-weight:750}
+.ff-blog-table thead{background:#111;color:#fff}
+.ff-blog-table th,.ff-blog-table td{padding:15px 18px;text-align:left;vertical-align:top;border-bottom:1px solid #d4d7db}
+.ff-blog-table tbody th{width:31%;font-weight:750}
+.ff-blog-table .ff-blog-number{text-align:right;white-space:nowrap}
 .ff-blog-prose a,.ff-blog-related-note a{color:#745000;font-weight:650;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
 .ff-blog-prose a:hover{color:#111;text-decoration-thickness:2px}
 .ff-blog-answer{background:#fffaec;border-left:4px solid #ffbf00;padding:28px 30px}

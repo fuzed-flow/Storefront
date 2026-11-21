@@ -18,6 +18,7 @@ test('blog articles expose complete content, canonical URLs and article metadata
     assert.ok(html.includes('property="og:type" content="article"'));
     assert.ok(html.includes(`property="og:image" content="https://www.fuzedflow.com${post.hero}"`));
     const expectedSection = {
+      'construction-change-order-example': 'Construction change order example: adding four pot lights',
       'what-makes-a-contractor-quote-stand-out': 'Build trust with photos and supporting documents',
       'choosing-contractor-software-5-questions': 'Can I access and export my business records?',
       'from-lead-to-project-closeout': 'Get paid and close out the balance',
