@@ -4,6 +4,7 @@ import LeadToCloseoutArticle, { closeoutSections } from './LeadToCloseoutArticle
 import ChoosingSoftwareArticle, { softwareQuestionsSections } from './ChoosingSoftwareArticle';
 import StandoutQuoteArticle, { standoutQuoteSections } from './StandoutQuoteArticle';
 import ChangeOrderArticle, { changeOrderSections } from './ChangeOrderArticle';
+import ClientUpdatesArticle, { clientUpdatesSections } from './ClientUpdatesArticle';
 import Page from '@/components/shared/Page';
 import BlogImage from '@/components/shared/BlogImage';
 import DemoForm from '@/components/forms/DemoForm';
@@ -122,7 +123,8 @@ export default function BlogPost() {
   const isSoftwareGuide = post.slug === 'choosing-contractor-software-5-questions';
   const isStandoutQuoteGuide = post.slug === 'what-makes-a-contractor-quote-stand-out';
   const isChangeOrderGuide = post.slug === 'construction-change-order-example';
-  const articleSections = isChangeOrderGuide ? changeOrderSections : isStandoutQuoteGuide ? standoutQuoteSections : isSoftwareGuide ? softwareQuestionsSections : isCloseoutGuide ? closeoutSections : sections;
+  const isClientUpdatesGuide = post.slug === 'client-project-updates-example';
+  const articleSections = isClientUpdatesGuide ? clientUpdatesSections : isChangeOrderGuide ? changeOrderSections : isStandoutQuoteGuide ? standoutQuoteSections : isSoftwareGuide ? softwareQuestionsSections : isCloseoutGuide ? closeoutSections : sections;
   const heroCaption = post.heroCaption || (isCloseoutGuide
     ? 'A renovation contractor starts a new lead in FuzedFlow during a site visit. Illustrative image.'
     : 'A clearer conversation starts with a shared understanding of the work. Illustrative image.');
@@ -147,11 +149,11 @@ export default function BlogPost() {
         <p className="ff-lead">{post.lead || (isCloseoutGuide ? 'A homeowner calls about a bathroom renovation. Follow that enquiry from the first site visit to the final walkthrough and payment.' : 'The useful difference is in the handoffs: from a clear quote to an informed client and a documented final walkthrough.')}</p>
         <p className="ff-blog-meta">By <Link to="/about" rel="author">{post.author}</Link> · <time dateTime={post.datePublished}>{formatBlogDate(post.datePublished)}</time></p>
       </div></header>
-      <figure className={`ff-shell ff-blog-hero-image${isStandoutQuoteGuide || isChangeOrderGuide ? ' ff-blog-hero-full' : ''}`}><BlogImage post={post} eager/><figcaption>{heroCaption}</figcaption></figure>
+      <figure className={`ff-shell ff-blog-hero-image${isStandoutQuoteGuide || isChangeOrderGuide || isClientUpdatesGuide ? ' ff-blog-hero-full' : ''}`}><BlogImage post={post} eager/><figcaption>{heroCaption}</figcaption></figure>
       <div className="ff-shell ff-blog-reading-layout">
         <aside className="ff-blog-toc"><nav aria-label="In this article"><h2>In this article</h2><ol>{articleSections.map(([id, title]) => <li key={id}><a href={`#${id}`}>{title}</a></li>)}</ol></nav></aside>
         <div className="ff-blog-prose">
-          {isChangeOrderGuide ? <ChangeOrderArticle/> : isStandoutQuoteGuide ? <StandoutQuoteArticle/> : isSoftwareGuide ? <ChoosingSoftwareArticle/> : isCloseoutGuide ? <>
+          {isClientUpdatesGuide ? <ClientUpdatesArticle/> : isChangeOrderGuide ? <ChangeOrderArticle/> : isStandoutQuoteGuide ? <StandoutQuoteArticle/> : isSoftwareGuide ? <ChoosingSoftwareArticle/> : isCloseoutGuide ? <>
             <div className="ff-blog-answer">
               <h2>How does a job move through FuzedFlow?</h2>
               <p>Capture the lead, turn the agreed scope into a project, and share progress with the client. Use the Project Deficiency Tool to give each outstanding item a photo, a person responsible, and a status. Verify the final touch-ups, collect the remaining balance, and send a receipt.</p>

@@ -1,5 +1,22 @@
 export const blogPosts = [
   {
+    slug: 'client-project-updates-example',
+    title: 'Client Project Updates: From Scattered Messages to One Portal',
+    seoTitle: 'Client Project Updates: Example & Template',
+    description: 'See how Gary from LBProjects moved from messages and Friday emails to client portal updates, with a weekly renovation example and a reusable update template.',
+    excerpt: 'Gary’s experience at LBProjects shows why a good project update needs a home. See a weekly example, portal screenshot and reusable template.',
+    category: 'Client communication',
+    datePublished: '2026-11-20',
+    dateModified: '2026-11-20',
+    author: 'FuzedFlow',
+    hero: '/images/blog/client-project-updates-example-1440.webp',
+    heroBase: '/images/blog/client-project-updates-example',
+    heroAlt: 'A laptop displaying a weekly project update in the FuzedFlow Client Portal on a dining table during a home renovation.',
+    heroCaption: 'Illustrative home-renovation scene incorporating the supplied Client Portal screenshot.',
+    lead: 'Keep the personal touch in your client updates, and give each reviewed update a place the homeowner and your team can return to.',
+    guideNote: 'Gary’s experience at LBProjects is paraphrased from his account shared with FuzedFlow. The weekly update example is fictional. The portal screenshot is from a demonstration account; the hero scene is illustrative. No time savings or customer results have been measured for this guide.',
+  },
+  {
     "slug": "construction-change-order-example",
     "title": "Construction Change Order Example: Keep Extra Work Connected to the Job",
     "seoTitle": "Construction Change Order Example & Template",
