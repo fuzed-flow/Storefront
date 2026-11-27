@@ -29,6 +29,8 @@ export default function WorkflowExample() {
       <p className="ff-blog-related-note"><Link to="/blog/what-makes-a-contractor-quote-stand-out">Build a clearer, more personal proposal: what makes a quote stand out →</Link></p>
       <p className="ff-blog-related-note"><Link to="/blog/construction-change-order-example">Keep extras connected: change-order example and template</Link></p>
       <p className="ff-blog-related-note"><Link to="/blog/client-project-updates-example">Keep clients informed: Gary’s experience and an update template</Link></p>
+      <p className="ff-blog-related-note"><Link to="/blog/choosing-software-small-renovation-business">Evaluate the workflow for a small renovation business</Link></p>
+      <p className="ff-blog-related-note"><Link to="/blog/switching-contractor-software-checklist">Organize the records before switching contractor software</Link></p>
       <div className="ff-cta-strip"><h2>Try the steps with your own scope.</h2><TrialCTA /></div>
     </article>
   </Page>;

@@ -53,6 +53,8 @@ export default function About() {
         <p className="mt-4"><Link to="/blog/what-makes-a-contractor-quote-stand-out">See what makes a contractor quote stand out →</Link></p>
         <p className="mt-4"><Link to="/blog/construction-change-order-example">Use a construction change-order example and template</Link></p>
         <p className="mt-4"><Link to="/blog/client-project-updates-example">See Gary’s experience with client project updates</Link></p>
+        <p className="mt-4"><Link to="/blog/choosing-software-small-renovation-business">Choose software around a small renovation crew’s work</Link></p>
+        <p className="mt-4"><Link to="/blog/switching-contractor-software-checklist">Plan a contractor software switch with a practical checklist</Link></p>
         <p className="mt-4"><Link to="/workflow-example">Follow a worked renovation example →</Link></p>
       </section>
 

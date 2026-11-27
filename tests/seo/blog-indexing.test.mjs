@@ -18,6 +18,8 @@ test('blog articles expose complete content, canonical URLs and article metadata
     assert.ok(html.includes('property="og:type" content="article"'));
     assert.ok(html.includes(`property="og:image" content="https://www.fuzedflow.com${post.hero}"`));
     const expectedSection = {
+      'choosing-software-small-renovation-business': 'What should I test before subscribing?',
+      'switching-contractor-software-checklist': 'How do I handle unpaid invoices and deposits?',
       'client-project-updates-example': 'A weekly renovation update the client can act on',
       'construction-change-order-example': 'Construction change order example: adding four pot lights',
       'what-makes-a-contractor-quote-stand-out': 'Build trust with photos and supporting documents',
